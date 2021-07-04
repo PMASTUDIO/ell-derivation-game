@@ -1,0 +1,29 @@
+{
+    "id": "fea919c1-9d6d-44a5-859d-65637ef2b7e9",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "DerivationGame"
+    },
+    "displayList": [
+        {
+            "type": "Text",
+            "id": "4a1e6035-7a34-415e-875d-09c32990e981",
+            "label": "label-main",
+            "components": [],
+            "x": 242,
+            "y": 22,
+            "originX": 0,
+            "originY": 0,
+            "text": "Neymar joga Golf",
+            "fontSize": "32px"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

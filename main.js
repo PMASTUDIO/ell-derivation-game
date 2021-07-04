@@ -4,6 +4,16 @@ window.addEventListener('load', function () {
     height: 600,
     type: Phaser.AUTO,
     parent: 'game',
+    physics: {
+        default: 'matter',
+        matter: {
+            enableSleeping: true,
+            debug: true,
+            gravity: {
+                y: 0.3
+            },
+        }
+    },
     backgroundColor: '#242424',
     scale: {
       mode: Phaser.Scale.FIT,

@@ -1,4 +1,3 @@
-
 // You can write more code here
 
 /* START OF COMPILED CODE */
@@ -9,8 +8,8 @@ class DerivationTut extends Phaser.Scene {
 		super("DerivationTut");
 		
 		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
+    // Write your code here.
+    /* END-USER-CTR-CODE */
 	}
 	
 	editorCreate() {
@@ -37,20 +36,24 @@ class DerivationTut extends Phaser.Scene {
 	btnNext;
 	
 	/* START-USER-CODE */
-	
-	// Write your code here
-	
-	create() {
-		this.editorCreate();
 
-		const video = this.add.dom(350, 350).createFromHTML(`<iframe width="560" height="315" src="https://www.youtube.com/embed/rK6ulQaOpso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+  // Write your code here
 
-		this.btnNext.setInteractive().on('pointerdown', (ptr) => {
-			// this.scene.start('DerivationTut')
-		})
-	}
-	
-	/* END-USER-CODE */
+  create() {
+    this.editorCreate();
+
+    const video = this.add
+      .dom(350, 350)
+      .createFromHTML(
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/rK6ulQaOpso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+      );
+
+    this.btnNext.setInteractive().on('pointerdown', (ptr) => {
+      this.scene.start('DerivationGame');
+    });
+  }
+
+  /* END-USER-CODE */
 }
 
 /* END OF COMPILED CODE */

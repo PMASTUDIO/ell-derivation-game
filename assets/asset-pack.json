@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/arrow.png",
+                "type": "image",
+                "key": "arrow"
+            },
+            {
                 "url": "assets/Blackboard.png",
                 "type": "image",
                 "key": "Blackboard"
@@ -15,6 +20,11 @@
                 "key": "components"
             },
             {
+                "url": "assets/scenes/DerivationGame.js",
+                "type": "sceneFile",
+                "key": "DerivationGame"
+            },
+            {
                 "url": "assets/scenes/DerivationTut.js",
                 "type": "sceneFile",
                 "key": "DerivationTut"
@@ -23,6 +33,26 @@
                 "url": "assets/dino.png",
                 "type": "image",
                 "key": "dino"
+            },
+            {
+                "url": "assets/gol.png",
+                "type": "image",
+                "key": "gol"
+            },
+            {
+                "url": "assets/golf-ball.png",
+                "type": "image",
+                "key": "golf-ball"
+            },
+            {
+                "url": "assets/golf-hole.png",
+                "type": "image",
+                "key": "golf-hole"
+            },
+            {
+                "url": "assets/ground.png",
+                "type": "image",
+                "key": "ground"
             },
             {
                 "url": "assets/scenes/IntroDialogue.js",
