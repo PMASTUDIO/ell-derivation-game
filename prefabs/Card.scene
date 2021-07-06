@@ -1,0 +1,30 @@
+{
+    "id": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": ""
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "7afaca0f-cd7a-4a38-ae5e-33a9913931fe",
+            "label": "image",
+            "components": [
+                "QuestionHolder"
+            ],
+            "texture": {
+                "key": "figurinha"
+            },
+            "scaleX": 0.26615496716484355,
+            "scaleY": 0.26615496716484355
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

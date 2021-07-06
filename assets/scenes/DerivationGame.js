@@ -86,7 +86,7 @@ class DerivationGame extends Phaser.Scene {
 		} else {
 			// NEXT LEVEL 
 			console.log("NEXT LEVEL!")
-			this.scene.start("NEXT_TUTORIAL");
+			this.scene.start("SufixTut");
 		}
 
 		let right = this.add.image(373.1230665371493, 340.8866708785447, "gol");

@@ -12,6 +12,11 @@
                 "key": "Blackboard"
             },
             {
+                "url": "prefabs/Card.js",
+                "type": "script",
+                "key": "Card"
+            },
+            {
                 "url": [
                     "assets/components/UserComponent.js",
                     "assets/components/PushOnClick.js"
@@ -33,6 +38,11 @@
                 "url": "assets/dino.png",
                 "type": "image",
                 "key": "dino"
+            },
+            {
+                "url": "assets/figurinha.jpg",
+                "type": "image",
+                "key": "figurinha"
             },
             {
                 "url": "assets/gol.png",
@@ -73,6 +83,21 @@
                 "url": "assets/play-btn.png",
                 "type": "image",
                 "key": "playBtn"
+            },
+            {
+                "url": "components/QuestionHolder.js",
+                "type": "script",
+                "key": "QuestionHolder"
+            },
+            {
+                "url": "assets/scenes/SufixGame.js",
+                "type": "sceneFile",
+                "key": "SufixGame"
+            },
+            {
+                "url": "assets/scenes/SufixTut.js",
+                "type": "sceneFile",
+                "key": "SufixTut"
             }
         ]
     },

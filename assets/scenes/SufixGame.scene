@@ -1,0 +1,173 @@
+{
+    "id": "2b310e27-592d-41c4-9375-eea94395f722",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "SufixGame"
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "c14f07e5-0ca5-42d4-bfcb-6c3c2bcd7a85",
+            "label": "rectangle",
+            "components": [],
+            "x": 395,
+            "y": 286,
+            "scaleX": 7.922313861345967,
+            "scaleY": 6.066237231533458,
+            "isFilled": true,
+            "fillColor": "#989500",
+            "width": 128,
+            "height": 128
+        },
+        {
+            "type": "Text",
+            "id": "8b049e1f-ffef-49ca-934d-ab8995a0efde",
+            "label": "txt_label",
+            "components": [],
+            "x": 24,
+            "y": 18,
+            "originX": 0,
+            "originY": 0,
+            "text": "E aí, consegue um desafio mais intelectual?",
+            "fixedHeight": 50,
+            "paddingLeft": 2,
+            "fontSize": "26px",
+            "fontStyle": "bold"
+        },
+        {
+            "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+            "id": "0d498eb2-0aba-4417-9805-728ca942d3ef",
+            "unlock": [
+                "QuestionHolder.itemName",
+                "QuestionHolder.label"
+            ],
+            "label": "card",
+            "components": [],
+            "QuestionHolder.label": "My question for 0",
+            "x": 112,
+            "y": 160
+        },
+        {
+            "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+            "id": "2622fca6-5dc3-496e-8fc3-5699d5a6f5f5",
+            "unlock": [
+                "QuestionHolder.itemName",
+                "QuestionHolder.label"
+            ],
+            "label": "card_1",
+            "components": [],
+            "QuestionHolder.label": "My answer for 0",
+            "x": 304,
+            "y": 160
+        },
+        {
+            "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+            "id": "903ef279-e0fa-41b5-bbad-3526508f3fe7",
+            "unlock": [
+                "QuestionHolder.itemName",
+                "QuestionHolder.label"
+            ],
+            "label": "card_1_1",
+            "components": [],
+            "QuestionHolder.itemName": "question1",
+            "QuestionHolder.label": "My Question 1",
+            "x": 496,
+            "y": 160
+        },
+        {
+            "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+            "id": "7ce7f2fe-6a87-4974-b78d-9ee84cfe2e10",
+            "unlock": [
+                "QuestionHolder.itemName",
+                "QuestionHolder.label"
+            ],
+            "label": "card_1_1_1",
+            "components": [],
+            "QuestionHolder.itemName": "question1",
+            "QuestionHolder.label": "My answer for 1",
+            "x": 688,
+            "y": 160
+        },
+        {
+            "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+            "id": "5be00dfa-5a4b-462d-8e98-01158fc95f36",
+            "unlock": [
+                "QuestionHolder.itemName",
+                "QuestionHolder.label"
+            ],
+            "label": "card_2",
+            "components": [],
+            "QuestionHolder.itemName": "question2",
+            "QuestionHolder.label": "my question for 2",
+            "x": 112,
+            "y": 384
+        },
+        {
+            "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+            "id": "cdd57026-96c9-4ad4-a6b8-c5c77578d4d8",
+            "unlock": [
+                "QuestionHolder.label",
+                "QuestionHolder.itemName"
+            ],
+            "label": "card_3",
+            "components": [],
+            "QuestionHolder.itemName": "question2",
+            "QuestionHolder.label": "My answer for 2",
+            "x": 304,
+            "y": 384
+        },
+        {
+            "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+            "id": "570b6587-8cc8-47b4-bc20-fceb2d2f4601",
+            "unlock": [
+                "QuestionHolder.itemName",
+                "QuestionHolder.label"
+            ],
+            "label": "card_4",
+            "components": [],
+            "QuestionHolder.itemName": "question3",
+            "QuestionHolder.label": "My question for 3",
+            "x": 496,
+            "y": 384
+        },
+        {
+            "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
+            "id": "2ed79631-14dd-430c-968f-0a6c649febe7",
+            "unlock": [
+                "QuestionHolder.itemName",
+                "QuestionHolder.label"
+            ],
+            "label": "card_5",
+            "components": [],
+            "QuestionHolder.itemName": "question3",
+            "QuestionHolder.label": "my question for 3",
+            "x": 688,
+            "y": 384
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    },
+    "lists": [
+        {
+            "id": "c652657a-cab5-46db-aa19-d9ae352d7df7",
+            "label": "Cards",
+            "objectIds": [
+                "2ed79631-14dd-430c-968f-0a6c649febe7",
+                "570b6587-8cc8-47b4-bc20-fceb2d2f4601",
+                "cdd57026-96c9-4ad4-a6b8-c5c77578d4d8",
+                "5be00dfa-5a4b-462d-8e98-01158fc95f36",
+                "0d498eb2-0aba-4417-9805-728ca942d3ef",
+                "2622fca6-5dc3-496e-8fc3-5699d5a6f5f5",
+                "903ef279-e0fa-41b5-bbad-3526508f3fe7",
+                "7ce7f2fe-6a87-4974-b78d-9ee84cfe2e10"
+            ]
+        }
+    ]
+}

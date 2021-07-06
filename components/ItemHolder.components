@@ -1,0 +1,34 @@
+{
+    "components": [
+        {
+            "name": "QuestionHolder",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "itemName",
+                    "label": "Item Name",
+                    "tooltip": "Item ID or Name",
+                    "defValue": "question0",
+                    "type": {
+                        "id": "string"
+                    }
+                },
+                {
+                    "name": "label",
+                    "label": "Label",
+                    "tooltip": "Question or Answer to appear on card",
+                    "defValue": "Test label",
+                    "type": {
+                        "id": "string"
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Object Script Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}
