@@ -33,6 +33,6 @@ class Boot extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start('SufixGame');
+    this.scene.start('PrefixTut');
   }
 }

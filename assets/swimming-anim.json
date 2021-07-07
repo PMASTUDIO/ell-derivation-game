@@ -1,0 +1,107 @@
+{
+    "anims": [
+        {
+            "key": "swim-right",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "tile008",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile009",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile010",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile011",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile012",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile013",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile014",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile015",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 16,
+            "skipMissedFrames": true,
+            "repeat": -1
+        },
+        {
+            "key": "swim-left",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "tile000",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile001",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile002",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile003",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile004",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile005",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile006",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "tile007",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 16,
+            "skipMissedFrames": true,
+            "repeat": -1
+        }
+    ],
+    "globalTimeScale": 1,
+    "meta": {
+        "app": "Phaser Editor 2D v3",
+        "contentType": "Phaser v3 Animations"
+    }
+}

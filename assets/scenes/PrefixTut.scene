@@ -1,0 +1,56 @@
+{
+    "id": "79dbe4ce-33c2-4007-977b-966805508679",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "PrefixTut"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "bcf4d09f-9a67-4987-b12f-73d8969db82d",
+            "label": "image",
+            "components": [],
+            "texture": {
+                "key": "Blackboard"
+            },
+            "x": 407,
+            "y": 296,
+            "scaleX": 1.4298172920948304,
+            "scaleY": 1.767829323009384
+        },
+        {
+            "type": "Text",
+            "id": "eee7ed6f-ab29-4a13-879e-1ee5a0a74fc9",
+            "label": "txt_title",
+            "components": [],
+            "x": 23,
+            "y": 11,
+            "originX": 0,
+            "originY": 0,
+            "text": "Treino 3 - Prefixo\n",
+            "fontSize": "42px"
+        },
+        {
+            "type": "Sprite",
+            "id": "8ce92709-6473-4a96-928a-e3b86db4f6b5",
+            "label": "btnNext",
+            "scope": "PUBLIC",
+            "components": [],
+            "texture": {
+                "key": "playBtn"
+            },
+            "x": 744,
+            "y": 542,
+            "scaleX": 0.16163694558756214,
+            "scaleY": 0.16163694558756214
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

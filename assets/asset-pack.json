@@ -7,6 +7,11 @@
                 "key": "arrow"
             },
             {
+                "url": "assets/back.png",
+                "type": "image",
+                "key": "back"
+            },
+            {
                 "url": "assets/Blackboard.png",
                 "type": "image",
                 "key": "Blackboard"
@@ -38,6 +43,11 @@
                 "url": "assets/dino.png",
                 "type": "image",
                 "key": "dino"
+            },
+            {
+                "url": "assets/evil-duolingo.png",
+                "type": "image",
+                "key": "evil-duolingo"
             },
             {
                 "url": "assets/figurinha.jpg",
@@ -85,6 +95,16 @@
                 "key": "playBtn"
             },
             {
+                "url": "assets/scenes/PrefixGame.js",
+                "type": "sceneFile",
+                "key": "PrefixGame"
+            },
+            {
+                "url": "assets/scenes/PrefixTut.js",
+                "type": "sceneFile",
+                "key": "PrefixTut"
+            },
+            {
                 "url": "components/QuestionHolder.js",
                 "type": "script",
                 "key": "QuestionHolder"
@@ -98,6 +118,91 @@
                 "url": "assets/scenes/SufixTut.js",
                 "type": "sceneFile",
                 "key": "SufixTut"
+            },
+            {
+                "url": "assets/swimming-anim.json",
+                "type": "animation",
+                "key": "swimming-anim"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile000.png",
+                "type": "image",
+                "key": "tile000"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile001.png",
+                "type": "image",
+                "key": "tile001"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile002.png",
+                "type": "image",
+                "key": "tile002"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile003.png",
+                "type": "image",
+                "key": "tile003"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile004.png",
+                "type": "image",
+                "key": "tile004"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile005.png",
+                "type": "image",
+                "key": "tile005"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile006.png",
+                "type": "image",
+                "key": "tile006"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile007.png",
+                "type": "image",
+                "key": "tile007"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile008.png",
+                "type": "image",
+                "key": "tile008"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile009.png",
+                "type": "image",
+                "key": "tile009"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile010.png",
+                "type": "image",
+                "key": "tile010"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile011.png",
+                "type": "image",
+                "key": "tile011"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile012.png",
+                "type": "image",
+                "key": "tile012"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile013.png",
+                "type": "image",
+                "key": "tile013"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile014.png",
+                "type": "image",
+                "key": "tile014"
+            },
+            {
+                "url": "assets/swim-spritesheet/tile015.png",
+                "type": "image",
+                "key": "tile015"
             }
         ]
     },
