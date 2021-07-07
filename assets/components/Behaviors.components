@@ -5,6 +5,12 @@
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Image",
             "properties": []
+        },
+        {
+            "name": "Countdown",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Text",
+            "properties": []
         }
     ],
     "meta": {

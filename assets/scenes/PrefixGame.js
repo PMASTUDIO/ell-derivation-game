@@ -198,7 +198,7 @@ class PrefixGame extends Phaser.Scene {
 		} else {
 			// FINISH LEVEL
 			console.log('WON!')
-			this.scene.start('NEXT_LEVEL');
+			this.scene.start('PrimitiveAndDerivativeTut');
 		}
 	}
 

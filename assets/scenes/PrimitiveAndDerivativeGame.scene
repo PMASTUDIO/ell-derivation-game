@@ -1,0 +1,95 @@
+{
+    "id": "3e41b5ef-6c57-4fa1-b8b8-ea92e157fdc6",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "PrimitiveAndDerivativeGame"
+    },
+    "displayList": [
+        {
+            "type": "Text",
+            "id": "5d6b0d60-1bac-43bb-98ca-180116551d56",
+            "label": "txt_countdown",
+            "scope": "CLASS",
+            "components": [
+                "Countdown"
+            ],
+            "x": 368,
+            "y": 16,
+            "scaleX": 0.702820375578614,
+            "scaleY": 0.702820375578614,
+            "originX": 0,
+            "originY": 0,
+            "text": "20",
+            "align": "center",
+            "fontSize": "64px"
+        },
+        {
+            "type": "Text",
+            "id": "51c26560-9a87-4f86-a1c2-360d2fdb4e3a",
+            "label": "txt_question",
+            "scope": "CLASS",
+            "components": [],
+            "x": 192,
+            "y": 80,
+            "scaleX": 0.5,
+            "scaleY": 0.5,
+            "originX": 0,
+            "originY": 0,
+            "text": "This is the question",
+            "fixedWidth": 800,
+            "fixedHeight": 160,
+            "align": "center",
+            "fontSize": "26px"
+        },
+        {
+            "type": "Text",
+            "id": "12506279-8676-4f2b-b838-bcb993309b8e",
+            "label": "txt_ans1",
+            "scope": "CLASS",
+            "components": [],
+            "y": 208,
+            "scaleX": 0.5,
+            "scaleY": 0.5,
+            "originX": 0,
+            "originY": 0,
+            "text": "my answer 1",
+            "fixedWidth": 306,
+            "fixedHeight": 630,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+            "fontFamily": "Arial",
+            "fontSize": "32px",
+            "color": "#000000ff"
+        },
+        {
+            "type": "Text",
+            "id": "62b5a56f-79c2-41cd-9d89-d1afc63ccde7",
+            "label": "txt_ans2",
+            "scope": "CLASS",
+            "components": [],
+            "x": 800,
+            "y": 208,
+            "scaleX": 0.5,
+            "scaleY": 0.5,
+            "originX": 1,
+            "originY": 0,
+            "text": "my answer 2\n",
+            "fixedWidth": 306,
+            "fixedHeight": 630,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+            "fontFamily": "Arial",
+            "fontSize": "32px",
+            "color": "#000000ff"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

@@ -119,6 +119,7 @@ class DerivationGame extends Phaser.Scene {
 
 		this.ground = this.matter.add.image(408, 504, "ground");
 
+		// #TODO: Try to move the static and mass call to below set rectangle
 		this.ground.setStatic(true);
 		this.ground.setMass(Infinity);
 		this.ground.setRectangle(10000, 500)

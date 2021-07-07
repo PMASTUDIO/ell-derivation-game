@@ -30,6 +30,11 @@
                 "key": "components"
             },
             {
+                "url": "assets/components/Countdown.js",
+                "type": "script",
+                "key": "Countdown"
+            },
+            {
                 "url": "assets/scenes/DerivationGame.js",
                 "type": "sceneFile",
                 "key": "DerivationGame"
@@ -90,6 +95,11 @@
                 "key": "MenuScene"
             },
             {
+                "url": "assets/neymar-pointing.png",
+                "type": "image",
+                "key": "neymar-pointing"
+            },
+            {
                 "url": "assets/play-btn.png",
                 "type": "image",
                 "key": "playBtn"
@@ -103,6 +113,16 @@
                 "url": "assets/scenes/PrefixTut.js",
                 "type": "sceneFile",
                 "key": "PrefixTut"
+            },
+            {
+                "url": "assets/scenes/PrimitiveAndDerivativeGame.js",
+                "type": "sceneFile",
+                "key": "PrimitiveAndDerivativeGame"
+            },
+            {
+                "url": "assets/scenes/PrimitiveAndDerivativeTut.js",
+                "type": "sceneFile",
+                "key": "PrimitiveAndDerivativeTut"
             },
             {
                 "url": "components/QuestionHolder.js",

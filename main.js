@@ -8,7 +8,16 @@ window.addEventListener('load', function () {
         default: 'matter',
         matter: {
             enableSleeping: true,
-            debug: true,
+            debug: {
+              showBody: true,
+              showStaticBody: true
+            },
+            setBounds: {
+              top: true,
+              right: true,
+              left: true,
+              bottom: true
+            },
             gravity: {
                 y: 0.3
             },
@@ -33,6 +42,6 @@ class Boot extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start('PrefixTut');
+    this.scene.start('PrimitiveAndDerivativeTut');
   }
 }
