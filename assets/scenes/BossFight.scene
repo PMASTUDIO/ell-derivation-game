@@ -1,0 +1,282 @@
+{
+    "id": "0d088681-cb57-4534-b256-f250a072152a",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "BossFight"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "64b51602-6137-4dcb-844d-aad386fb4ecb",
+            "label": "evil_duolingo",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "evil-duolingo"
+            },
+            "x": 268,
+            "y": 35
+        },
+        {
+            "type": "Image",
+            "id": "3eefc466-bf57-4463-99be-ccaf110c9d7a",
+            "label": "neymar_pointing",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "neymar-pointing"
+            },
+            "x": 655,
+            "y": 408,
+            "scaleX": 0.07311075498480107,
+            "scaleY": 0.07311075498480107
+        },
+        {
+            "type": "Container",
+            "id": "c9bd6890-4681-48b8-85a7-5296b47f7e26",
+            "label": "QuizCont",
+            "scope": "CLASS",
+            "components": [],
+            "x": 223,
+            "y": 40,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "94e1bce7-0bd5-42e6-ab29-cba859399fdb",
+                    "label": "bg_quiz",
+                    "components": [],
+                    "x": 209,
+                    "y": 153,
+                    "scaleX": 3.3071655254891805,
+                    "scaleY": 2.3925613322157204,
+                    "isFilled": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "ab0dfd11-c6f5-425a-88da-22c61038ce15",
+                    "label": "txt_quest",
+                    "scope": "PUBLIC",
+                    "components": [],
+                    "scaleX": 0.4902671930598873,
+                    "scaleY": 0.4902671930598873,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Question\n",
+                    "fontFamily": "Arial",
+                    "fontSize": "26px",
+                    "color": "#000000ff",
+                    "maxLines": 3
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "ed636a8f-335d-42b2-acdd-48444227c092",
+                    "label": "bg_ans1",
+                    "scope": "PUBLIC",
+                    "components": [],
+                    "x": 209,
+                    "y": 73,
+                    "isFilled": true,
+                    "fillColor": "#e8e8e8",
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 400,
+                    "height": 40
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "4defc71f-53c9-4593-905a-39d34ce6656a",
+                    "label": "bg_ans2",
+                    "scope": "PUBLIC",
+                    "components": [],
+                    "x": 209,
+                    "y": 121,
+                    "isFilled": true,
+                    "fillColor": "#e8e8e8",
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 400,
+                    "height": 40
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "7167b943-b8be-4227-973e-61a5fe0f52b5",
+                    "label": "bg_ans3",
+                    "scope": "PUBLIC",
+                    "components": [],
+                    "x": 209,
+                    "y": 169,
+                    "isFilled": true,
+                    "fillColor": "#e8e8e8",
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 400,
+                    "height": 40
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "0b000c05-3a03-4933-83d3-a25ef8c1704f",
+                    "label": "bg_ans4",
+                    "scope": "PUBLIC",
+                    "components": [],
+                    "x": 209,
+                    "y": 217,
+                    "isFilled": true,
+                    "fillColor": "#e8e8e8",
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 400,
+                    "height": 40
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "a3722690-8f55-4400-b9dc-ea844eb273d8",
+                    "label": "bg_ans5",
+                    "scope": "PUBLIC",
+                    "components": [],
+                    "x": 209,
+                    "y": 265,
+                    "isFilled": true,
+                    "fillColor": "#e8e8e8",
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 400,
+                    "height": 40
+                },
+                {
+                    "type": "Text",
+                    "id": "ef533bb6-1e26-4108-b6c6-4c132284145d",
+                    "label": "txt_ans1",
+                    "components": [],
+                    "x": 17,
+                    "y": 57,
+                    "scaleX": 0.46983648850695375,
+                    "scaleY": 0.46983648850695375,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "New text 𝐡𝐞𝐲",
+                    "fixedWidth": 800,
+                    "fixedHeight": 70,
+                    "fontFamily": "arial",
+                    "fontSize": "32px",
+                    "color": "#000000ff",
+                    "maxLines": 2
+                },
+                {
+                    "type": "Text",
+                    "id": "d317444d-5f43-46d3-be4b-f9efb39bfe62",
+                    "label": "txt_ans2",
+                    "components": [],
+                    "x": 17,
+                    "y": 105,
+                    "scaleX": 0.46983648850695375,
+                    "scaleY": 0.46983648850695375,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "New text 𝐡𝐞𝐲",
+                    "fixedWidth": 800,
+                    "fixedHeight": 70,
+                    "fontFamily": "arial",
+                    "fontSize": "32px",
+                    "color": "#000000ff",
+                    "maxLines": 2
+                },
+                {
+                    "type": "Text",
+                    "id": "3889dd25-f14a-4c40-aee9-188a62248cdd",
+                    "label": "txt_ans3",
+                    "components": [],
+                    "x": 17,
+                    "y": 153,
+                    "scaleX": 0.46983648850695375,
+                    "scaleY": 0.46983648850695375,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "New text 𝐡𝐞𝐲",
+                    "fixedWidth": 800,
+                    "fixedHeight": 70,
+                    "fontFamily": "arial",
+                    "fontSize": "32px",
+                    "color": "#000000ff",
+                    "maxLines": 2
+                },
+                {
+                    "type": "Text",
+                    "id": "f8d5af74-f217-4de7-9af4-2ac0da54b930",
+                    "label": "txt_ans4",
+                    "components": [],
+                    "x": 17,
+                    "y": 201,
+                    "scaleX": 0.46983648850695375,
+                    "scaleY": 0.46983648850695375,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "New text 𝐡𝐞𝐲",
+                    "fixedWidth": 800,
+                    "fixedHeight": 70,
+                    "fontFamily": "arial",
+                    "fontSize": "32px",
+                    "color": "#000000ff",
+                    "maxLines": 2
+                },
+                {
+                    "type": "Text",
+                    "id": "53113e75-1bef-4e1a-8f4a-63dd92abcaa2",
+                    "label": "txt_ans5",
+                    "components": [],
+                    "x": 17,
+                    "y": 249,
+                    "scaleX": 0.46983648850695375,
+                    "scaleY": 0.46983648850695375,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "New text 𝐡𝐞𝐲",
+                    "fixedWidth": 800,
+                    "fixedHeight": 70,
+                    "fontFamily": "arial",
+                    "fontSize": "32px",
+                    "color": "#000000ff",
+                    "maxLines": 2
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    },
+    "lists": [
+        {
+            "id": "4dfe229d-c059-4264-8286-a5a2ca18f895",
+            "label": "AnsBox",
+            "objectIds": [
+                "ed636a8f-335d-42b2-acdd-48444227c092",
+                "4defc71f-53c9-4593-905a-39d34ce6656a",
+                "7167b943-b8be-4227-973e-61a5fe0f52b5",
+                "0b000c05-3a03-4933-83d3-a25ef8c1704f",
+                "a3722690-8f55-4400-b9dc-ea844eb273d8"
+            ]
+        },
+        {
+            "id": "df13238e-0115-4e85-b0bd-a1afe2f9bb74",
+            "label": "AnsTxt",
+            "objectIds": [
+                "ef533bb6-1e26-4108-b6c6-4c132284145d",
+                "d317444d-5f43-46d3-be4b-f9efb39bfe62",
+                "3889dd25-f14a-4c40-aee9-188a62248cdd",
+                "f8d5af74-f217-4de7-9af4-2ac0da54b930",
+                "53113e75-1bef-4e1a-8f4a-63dd92abcaa2"
+            ]
+        }
+    ]
+}

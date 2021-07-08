@@ -42,6 +42,6 @@ class Boot extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start('PrimitiveAndDerivativeTut');
+    this.scene.start('FinalDialogue');
   }
 }

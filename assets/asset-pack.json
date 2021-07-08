@@ -17,6 +17,11 @@
                 "key": "Blackboard"
             },
             {
+                "url": "assets/scenes/BossFight.js",
+                "type": "sceneFile",
+                "key": "BossFight"
+            },
+            {
                 "url": "prefabs/Card.js",
                 "type": "script",
                 "key": "Card"
@@ -58,6 +63,11 @@
                 "url": "assets/figurinha.jpg",
                 "type": "image",
                 "key": "figurinha"
+            },
+            {
+                "url": "assets/scenes/FinalDialogue.js",
+                "type": "sceneFile",
+                "key": "FinalDialogue"
             },
             {
                 "url": "assets/gol.png",
