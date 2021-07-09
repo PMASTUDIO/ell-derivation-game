@@ -42,6 +42,9 @@ class Boot extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start('FinalDialogue');
+    let music = this.sound.add('background-music', {loop:true, volume: 0.6});
+    music.play();
+
+    this.scene.start('MenuScene');
   }
 }

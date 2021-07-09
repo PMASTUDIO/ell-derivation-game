@@ -122,13 +122,19 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 				} else {
 					// WON!
 					console.log("won!")
-					this.scene.start("NEXT_LEVEL");
+					this.scene.start("FinalDialogue");
 				}
 
 			})
 		} else {
 			// WRONG!
+			this.activeAnswerI == 0 ? this.bg_ans1.setFillStyle('0xff0000') : this.bg_ans2.setFillStyle('0xff0000')
 			console.log("LOST! Selected index: " + this.activeAnswerI + " - Correct Index: " + this.currentQuestion.correct_index )
+			
+			this.time.delayedCall(2000, () => {
+				this.scene.start('LostScene', { sceneToReturn: 'PrimitiveAndDerivativeGame' })
+			})
+			
 			// #TODO: LOST PAGE
 		}
 	}
@@ -140,10 +146,12 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		});
 
 		this.keys.right.on('down', () => {
+			this.sound.play('men-scream')
 			this.character.applyForce(new Phaser.Math.Vector2(2, 0))
 			this.character.setAngularVelocity(2)
 		})
 		this.keys.left.on('down', () => {
+			this.sound.play('men-scream')
 			this.character.applyForce(new Phaser.Math.Vector2(-2, 0))
 			this.character.setAngularVelocity(-2)
 		})
@@ -158,9 +166,14 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		this.txt_ans2.setText(this.currentQuestion.alternatives[1])
 	}
 
-	create() {
+	create(data) {
 	
 		this.editorCreate();
+
+		if(data.reset){
+			currentQuestionIndex = 0;
+			data.reset = undefined;
+		}
 
 		// Ground
 		this.ground = this.matter.add.image(399, 536, "ground");

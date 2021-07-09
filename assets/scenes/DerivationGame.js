@@ -33,24 +33,24 @@ class DerivationGame extends Phaser.Scene {
 	get_data = (level_index) => {
 		this.questions = [
 			{
-				question: "Marque a alternativa <b>cujas palavras</b> tenham sido formadas \n apenas pelo processo de derivação prefixal:",
+				question: "Acerte a alternativa cujas palavras tenham sido formadas \n a͟p͟e͟n͟a͟s͟ pelo processo de derivação prefixal",
 				alternatives: [" desobedecer\n desacatar\n distrito\n", " destelhar\n infiltrar\n consequentemente\n", " desarmonia\n pluma\n atordoado\n", " desamor\n antiético\n desentender\n"],
-				correct_index: 0
+				correct_index: 3
 			},
 			{
-				question: "Marque a alternativa cuja palavra tenha sido formada \n pelo processo de derivação parassintética",
-				alternatives: ["almoxarifado", "orangotango", "beija-flor", "aprimoramento"],
-				correct_index: 0
+				question: "Acerte a alternativa cuja palavra tenha sido formada \n pelo processo de d͟e͟r͟i͟v͟a͟ç͟ã͟o͟ ͟p͟a͟r͟a͟s͟s͟i͟n͟t͟é͟t͟i͟c͟a͟",
+				alternatives: ["almoxarifado", "orangotango", "beija-flor", "desavisado"],
+				correct_index: 3
 			},
 			{
-				question: "Marque a alternativa cuja palavra grifada seja formada \n pelo processo de derivação regressiva:",
-				alternatives: ["Haja coração!", "A compra do imóvel \n já foi cadastrada.", "Os maus serão \n punidos.", "A índia estava \n acocorada na beira do rio."],
-				correct_index: 0
+				question: "Acerte a alternativa cuja palavra em maiúscula seja formada \n pelo processo de derivação regressiva:",
+				alternatives: ["HAJA coração!", "A COMPRA do imóvel \n já foi cadastrada.", "Os MAUS serão \n punidos.", "A índia estava \n ACOCORADA na beira do rio."],
+				correct_index: 1
 			},
 			{
-				question: "Assinale a alternativa cujas palavras sejam formadas \n pelo processo de derivação sufixal nominal:",
+				question: "Acerte a alternativa cujas palavras sejam formadas \n pelo processo de derivação sufixal nominal:",
 				alternatives: [" moleza\n enciclopédia\n carreata\n", " destreza\n beleza\n chuviscar\n", " tristeza\n luterano\n beleza\n", "chuvisco\n beleza\n córrego\n"],
-				correct_index: 0
+				correct_index: 2
 			},
 		];
 
@@ -59,23 +59,27 @@ class DerivationGame extends Phaser.Scene {
 		// txt_quest
 		const txt_quest = this.add.text(36, 86, "", {});
 		txt_quest.text = this.active_question_obj.question;
-		txt_quest.setStyle({"fontSize":"16px"});
+		txt_quest.setStyle({"fontFamily":"Arial","fontSize":"16px"});
 
 		// txt_ans2
 		const txt_ans2 = this.add.text(163, 480, "", {});
 		txt_ans2.text = this.active_question_obj.alternatives[1];
+		txt_ans2.setStyle({"fontFamily":"Arial","fontSize":"16px"});
 		
 		// txt_ans1
 		const txt_ans1 = this.add.text(30, 480, "", {});
 		txt_ans1.text = this.active_question_obj.alternatives[0];
-		
+		txt_ans1.setStyle({"fontFamily":"Arial","fontSize":"16px"});
+
 		// txt_ans3
 		const txt_ans3 = this.add.text(540, 480, "", {});
 		txt_ans3.text = this.active_question_obj.alternatives[2];
+		txt_ans3.setStyle({"fontFamily":"Arial","fontSize":"16px"});
 		
 		// txt_ans4
 		const txt_ans4 = this.add.text(668, 480, "", {});
 		txt_ans4.text = this.active_question_obj.alternatives[3];
+		txt_ans4.setStyle({"fontFamily":"Arial","fontSize":"16px"});
 		
 		this.txt_ans = [txt_ans1, txt_ans2, txt_ans3, txt_ans4];
 	}
@@ -101,7 +105,8 @@ class DerivationGame extends Phaser.Scene {
 	}
 
 	answeredWrong = () => {
-		// SHOW MEME SCENE
+		// SHOW MEME SCENEW
+		this.scene.start('LostScene', { sceneToReturn: 'DerivationGame' })
 	}
 
 	initScene = (level) => {
@@ -152,6 +157,9 @@ class DerivationGame extends Phaser.Scene {
 			this.hole_answers[i].setStatic(true)
 			this.hole_answers[i].setScale(0.2, 0.2)
 			this.hole_answers[i].setOnCollideWith(this.ball, (pair) => {
+				this.ball.body.destroy();
+				this.ball.setAlpha(0);
+
 				if(this.active_question_obj.correct_index == i){
 					// RIGHT ANSWER
 					this.answeredRight();
@@ -166,7 +174,13 @@ class DerivationGame extends Phaser.Scene {
 
 	}
 
-	create() {
+	create(data) {
+		
+		if(data.reset){
+			currentQuestionIndex = 0;
+			data.reset = undefined;
+		}
+
 		this.matter.world.setBounds(0, 0, 800, 600, 32, true, true, true, true);
 
 		// rectangle
@@ -199,6 +213,8 @@ class DerivationGame extends Phaser.Scene {
 				this.ball.applyForce({x: XVector, y: YVector});
 
 				console.log(XVector)
+
+				this.sound.play('golf')
 			});
 		})
 

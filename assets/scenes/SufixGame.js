@@ -69,48 +69,48 @@ class SufixGame extends Phaser.Scene {
 		
 		// card (components)
 		const cardQuestionHolder = QuestionHolder.getComponent(card);
-		cardQuestionHolder.label = "My question for 0";
+		cardQuestionHolder.label = "“O melhor do \nBrasil é o \nbrasileiro”\numa carta contém \npalavras formadas\npor um sufixo \nsemelhante ao da\npalavra \"mineiro\"";
 		card.emit("components-awake");
 		
 		// card_1 (components)
 		const card_1QuestionHolder = QuestionHolder.getComponent(card_1);
-		card_1QuestionHolder.label = "My answer for 0";
+		card_1QuestionHolder.itemName = "question1";
+		card_1QuestionHolder.label = "Encontre a carta\ncuja palavra é \nformada pelo \nacréscimo de \num sufixo";
 		card_1.emit("components-awake");
 		
 		// card_1_1 (components)
 		const card_1_1QuestionHolder = QuestionHolder.getComponent(card_1_1);
-		card_1_1QuestionHolder.itemName = "question1";
-		card_1_1QuestionHolder.label = "My Question 1";
+		card_1_1QuestionHolder.label = "Cearense, \nItaliano, \nPernambucano,\nParaense";
 		card_1_1.emit("components-awake");
 		
 		// card_1_1_1 (components)
 		const card_1_1_1QuestionHolder = QuestionHolder.getComponent(card_1_1_1);
-		card_1_1_1QuestionHolder.itemName = "question1";
-		card_1_1_1QuestionHolder.label = "My answer for 1";
+		card_1_1_1QuestionHolder.itemName = "question3";
+		card_1_1_1QuestionHolder.label = "a) ( ) acidez e laranjal\nb) ( ) confortável e cortesia\nc) ( ) economista e passeata\nd) ( ) estudioso e ganância\ne) ( ) grandeza e tolerância\n\n????";
 		card_1_1_1.emit("components-awake");
 		
 		// card_2 (components)
 		const card_2QuestionHolder = QuestionHolder.getComponent(card_2);
-		card_2QuestionHolder.itemName = "question2";
-		card_2QuestionHolder.label = "my question for 2";
+		card_2QuestionHolder.itemName = "question3";
+		card_2QuestionHolder.label = "Ache a carta \nque contém \npalavras com \nos sinônimos dos \nsufixos de \nsustentabilidade e \nperpetuação, \nRESPECTIVAMENTE\n";
 		card_2.emit("components-awake");
 		
 		// card_3 (components)
 		const card_3QuestionHolder = QuestionHolder.getComponent(card_3);
 		card_3QuestionHolder.itemName = "question2";
-		card_3QuestionHolder.label = "My answer for 2";
+		card_3QuestionHolder.label = "Ache a carta em \nque o par de \nsufixos possui\no mesmo valor \nsemântico dos \nsufixos de boiada\ne dentada\n";
 		card_3.emit("components-awake");
 		
 		// card_4 (components)
 		const card_4QuestionHolder = QuestionHolder.getComponent(card_4);
-		card_4QuestionHolder.itemName = "question3";
-		card_4QuestionHolder.label = "My question for 3";
+		card_4QuestionHolder.itemName = "question2";
+		card_4QuestionHolder.label = "a) ( ) pincelada / cartada\nb) ( ) folhagem/ facada\nc) ( ) gritaria/ peneira\nd) ( ) aprendizagem/ vasilhame\n\n??????????????";
 		card_4.emit("components-awake");
 		
 		// card_5 (components)
 		const card_5QuestionHolder = QuestionHolder.getComponent(card_5);
-		card_5QuestionHolder.itemName = "question3";
-		card_5QuestionHolder.label = "my question for 3";
+		card_5QuestionHolder.itemName = "question1";
+		card_5QuestionHolder.label = "a) ( ) imprensa\nb) ( ) descobrir\nc) ( ) reforma\nd) ( ) irracional\ne) ( ) rigidez\n\n??????????????????????????";
 		card_5.emit("components-awake");
 		
 		this.cards = cards;
@@ -186,6 +186,8 @@ class SufixGame extends Phaser.Scene {
 			card: card,
 			item: itemHolder.itemName
 		})
+
+		this.sound.play('card-flip')
 
 		itemHolder.reveal(() => {
 			if(this.selectedBoxes.length < 2){

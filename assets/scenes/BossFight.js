@@ -234,7 +234,9 @@ class BossFight extends Phaser.Scene {
 							this.killNeymar();
 							console.log('LOST TRY AGAIN...')
 
-							//TODO: LOST PAGE
+							this.time.delayedCall(1000, () => {
+								this.scene.start('LostScene', { sceneToReturn: 'BossFight' })
+							})
 						})
 					}
 				})
@@ -258,12 +260,18 @@ class BossFight extends Phaser.Scene {
 
 	killNeymar = () => {
 		this.evil_duolingo.applyForce(new Phaser.Math.Vector2(10, 0))
+		this.sound.play('shout')
 		this.neymar_pointing.destroy();
 	}
 
-	create() {
+	create(data) {
 	
 		this.editorCreate();
+
+		if(data.reset){
+			this.currentQuestionIndex = 0;
+			data.reset = undefined;
+		}
 
 		// Ground
 		this.ground = this.matter.add.image(399, 536, "ground");
@@ -291,6 +299,7 @@ class BossFight extends Phaser.Scene {
 			this.evil_duolingo.applyForce(new Phaser.Math.Vector2(0, -10))
 			
 			// DESTRUCTION AUDIO EFFECT
+			this.sound.play('earthquake')
 
 			this.jump_counter = 150;
 		}

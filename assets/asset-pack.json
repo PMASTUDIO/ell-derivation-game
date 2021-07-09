@@ -12,6 +12,13 @@
                 "key": "back"
             },
             {
+                "url": [
+                    "assets/music/background-music.wav"
+                ],
+                "type": "audio",
+                "key": "background-music"
+            },
+            {
                 "url": "assets/Blackboard.png",
                 "type": "image",
                 "key": "Blackboard"
@@ -25,6 +32,13 @@
                 "url": "prefabs/Card.js",
                 "type": "script",
                 "key": "Card"
+            },
+            {
+                "url": [
+                    "assets/sfx/card-flip.wav"
+                ],
+                "type": "audio",
+                "key": "card-flip"
             },
             {
                 "url": [
@@ -55,6 +69,13 @@
                 "key": "dino"
             },
             {
+                "url": [
+                    "assets/sfx/earthquake.wav"
+                ],
+                "type": "audio",
+                "key": "earthquake"
+            },
+            {
                 "url": "assets/evil-duolingo.png",
                 "type": "image",
                 "key": "evil-duolingo"
@@ -73,6 +94,13 @@
                 "url": "assets/gol.png",
                 "type": "image",
                 "key": "gol"
+            },
+            {
+                "url": [
+                    "assets/sfx/golf.wav"
+                ],
+                "type": "audio",
+                "key": "golf"
             },
             {
                 "url": "assets/golf-ball.png",
@@ -98,6 +126,18 @@
                 "url": "assets/scenes/Level.js",
                 "type": "sceneFile",
                 "key": "Level"
+            },
+            {
+                "url": "assets/scenes/LostScene.js",
+                "type": "sceneFile",
+                "key": "LostScene"
+            },
+            {
+                "url": [
+                    "assets/sfx/men-scream.wav"
+                ],
+                "type": "audio",
+                "key": "men-scream"
             },
             {
                 "url": "assets/scenes/MenuScene.js",
@@ -140,6 +180,18 @@
                 "key": "QuestionHolder"
             },
             {
+                "url": "assets/return_arrow.png",
+                "type": "image",
+                "key": "return_arrow"
+            },
+            {
+                "url": [
+                    "assets/sfx/shout.wav"
+                ],
+                "type": "audio",
+                "key": "shout"
+            },
+            {
                 "url": "assets/scenes/SufixGame.js",
                 "type": "sceneFile",
                 "key": "SufixGame"
@@ -148,6 +200,13 @@
                 "url": "assets/scenes/SufixTut.js",
                 "type": "sceneFile",
                 "key": "SufixTut"
+            },
+            {
+                "url": [
+                    "assets/sfx/swimming.wav"
+                ],
+                "type": "audio",
+                "key": "swimming"
             },
             {
                 "url": "assets/swimming-anim.json",

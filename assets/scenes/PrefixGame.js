@@ -198,6 +198,8 @@ class PrefixGame extends Phaser.Scene {
 		} else {
 			// FINISH LEVEL
 			console.log('WON!')
+			this.swimmingSound.stop();
+			this.swimmingSound.destroy();
 			this.scene.start('PrimitiveAndDerivativeTut');
 		}
 	}
@@ -212,8 +214,11 @@ class PrefixGame extends Phaser.Scene {
 			console.log(alt)
 			alt.setFillStyle('0xff0000')
 			this.time.delayedCall(1000, () => {
+				this.swimmingSound.stop();
+				this.swimmingSound.destroy();
+
 				console.log('LOST TRY AGAIN...')
-				//TODO: LOST PAGE
+				this.scene.start('LostScene', { sceneToReturn: 'PrefixGame' })
 			})
 		}
 	}
@@ -230,9 +235,19 @@ class PrefixGame extends Phaser.Scene {
 		})
 	}
 	
-	create() {
+	create(data) {
 	
+		console.log(data)
+
 		this.editorCreate();
+
+		this.swimmingSound = this.sound.add('swimming', { loop: true })
+		this.swimmingSound.play();
+
+		if(data.reset){
+			this.currentQuestionIndex = 0;
+			data.reset = undefined;
+		}
 
 		this.swimming_neymar.play('swim-right')
 
@@ -257,6 +272,11 @@ class PrefixGame extends Phaser.Scene {
 			// LOST
 			console.log("LOST")
 			this.duo_evil.setTint('0x000000')
+			this.time.delayedCall(1000, () => {
+				this.swimmingSound.stop();
+				this.swimmingSound.destroy();
+				this.scene.start('LostScene', { sceneToReturn: 'PrefixGame' })
+			})
 		} else if(this.swimming_neymar.y >= 400){
 			this.duo_evil.setTint('0xff3030')
 		} else {

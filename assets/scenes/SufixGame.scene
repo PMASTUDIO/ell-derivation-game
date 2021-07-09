@@ -46,7 +46,7 @@
             ],
             "label": "card",
             "components": [],
-            "QuestionHolder.label": "My question for 0",
+            "QuestionHolder.label": "“O melhor do \nBrasil é o \nbrasileiro”\numa carta contém \npalavras formadas\npor um sufixo \nsemelhante ao da\npalavra \"mineiro\"",
             "x": 112,
             "y": 160
         },
@@ -59,7 +59,8 @@
             ],
             "label": "card_1",
             "components": [],
-            "QuestionHolder.label": "My answer for 0",
+            "QuestionHolder.itemName": "question1",
+            "QuestionHolder.label": "Encontre a carta\ncuja palavra é \nformada pelo \nacréscimo de \num sufixo",
             "x": 304,
             "y": 160
         },
@@ -72,8 +73,7 @@
             ],
             "label": "card_1_1",
             "components": [],
-            "QuestionHolder.itemName": "question1",
-            "QuestionHolder.label": "My Question 1",
+            "QuestionHolder.label": "Cearense, \nItaliano, \nPernambucano,\nParaense",
             "x": 496,
             "y": 160
         },
@@ -86,8 +86,8 @@
             ],
             "label": "card_1_1_1",
             "components": [],
-            "QuestionHolder.itemName": "question1",
-            "QuestionHolder.label": "My answer for 1",
+            "QuestionHolder.itemName": "question3",
+            "QuestionHolder.label": "a) ( ) acidez e laranjal\nb) ( ) confortável e cortesia\nc) ( ) economista e passeata\nd) ( ) estudioso e ganância\ne) ( ) grandeza e tolerância\n\n????",
             "x": 688,
             "y": 160
         },
@@ -100,8 +100,8 @@
             ],
             "label": "card_2",
             "components": [],
-            "QuestionHolder.itemName": "question2",
-            "QuestionHolder.label": "my question for 2",
+            "QuestionHolder.itemName": "question3",
+            "QuestionHolder.label": "Ache a carta \nque contém \npalavras com \nos sinônimos dos \nsufixos de \nsustentabilidade e \nperpetuação, \nRESPECTIVAMENTE\n",
             "x": 112,
             "y": 384
         },
@@ -115,7 +115,7 @@
             "label": "card_3",
             "components": [],
             "QuestionHolder.itemName": "question2",
-            "QuestionHolder.label": "My answer for 2",
+            "QuestionHolder.label": "Ache a carta em \nque o par de \nsufixos possui\no mesmo valor \nsemântico dos \nsufixos de boiada\ne dentada\n",
             "x": 304,
             "y": 384
         },
@@ -128,8 +128,8 @@
             ],
             "label": "card_4",
             "components": [],
-            "QuestionHolder.itemName": "question3",
-            "QuestionHolder.label": "My question for 3",
+            "QuestionHolder.itemName": "question2",
+            "QuestionHolder.label": "a) ( ) pincelada / cartada\nb) ( ) folhagem/ facada\nc) ( ) gritaria/ peneira\nd) ( ) aprendizagem/ vasilhame\n\n??????????????",
             "x": 496,
             "y": 384
         },
@@ -142,8 +142,8 @@
             ],
             "label": "card_5",
             "components": [],
-            "QuestionHolder.itemName": "question3",
-            "QuestionHolder.label": "my question for 3",
+            "QuestionHolder.itemName": "question1",
+            "QuestionHolder.label": "a) ( ) imprensa\nb) ( ) descobrir\nc) ( ) reforma\nd) ( ) irracional\ne) ( ) rigidez\n\n??????????????????????????",
             "x": 688,
             "y": 384
         }
