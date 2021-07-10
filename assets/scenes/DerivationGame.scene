@@ -18,6 +18,22 @@
             "originY": 0,
             "text": "Neymar joga Golf",
             "fontSize": "32px"
+        },
+        {
+            "type": "Text",
+            "id": "9dab1204-45b2-4d63-8924-5e6c25fc003f",
+            "label": "txt_inst",
+            "scope": "CLASS",
+            "components": [],
+            "x": 471,
+            "y": 95,
+            "scaleX": 0.674011695243739,
+            "scaleY": 0.674011695243739,
+            "originX": 0,
+            "originY": 0,
+            "text": "Arraste com o mouse para\nacertar a bola no buraco \ncom a reposta certa.",
+            "fontSize": "32px",
+            "color": "#ff0101ff"
         }
     ],
     "plainObjects": [],

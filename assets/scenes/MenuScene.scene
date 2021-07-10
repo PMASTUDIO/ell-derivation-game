@@ -29,10 +29,21 @@
             "texture": {
                 "key": "playBtn"
             },
-            "x": 412,
-            "y": 284,
+            "x": 139,
+            "y": 120,
             "scaleX": 0.4288998501767396,
             "scaleY": 0.4288998501767396
+        },
+        {
+            "type": "Text",
+            "id": "2502f33b-7fe8-4c32-a992-814c6d1501df",
+            "label": "text",
+            "components": [],
+            "x": 64,
+            "y": 305,
+            "originX": 0,
+            "originY": 0,
+            "text": "Créditos:\n\nhttps://freesound.org/\nhttps://www.todamateria.com.br/formacao-de-palavras/\nhttps://mundoeducacao.uol.com.br/gramatica/substantivo-primitivo.htm \nExercícios sobre derivação - Mundo Educação (uol.com.br)\nExercícios sobre formação de palavras - Toda Matéria (todamateria.com.br)\nExercícios Resolvidos de Morfologia - Só Português (soportugues.com.br)\nExercícios sobre radicais e prefixos latinos - Brasil Escola (uol.com.br)\n"
         }
     ],
     "plainObjects": [],

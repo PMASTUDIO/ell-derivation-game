@@ -8,10 +8,10 @@ window.addEventListener('load', function () {
         default: 'matter',
         matter: {
             enableSleeping: true,
-            debug: {
-              showBody: true,
-              showStaticBody: true
-            },
+            // debug: {
+            //   showBody: true,
+            //   showStaticBody: true
+            // },
             setBounds: {
               top: true,
               right: true,

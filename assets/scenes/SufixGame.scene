@@ -31,7 +31,7 @@
             "y": 18,
             "originX": 0,
             "originY": 0,
-            "text": "E aí, consegue um desafio mais intelectual?",
+            "text": "E aí, consegue um desafio mais intelectual?\n(jogo da memória)",
             "fixedHeight": 50,
             "paddingLeft": 2,
             "fontSize": "26px",
@@ -48,7 +48,7 @@
             "components": [],
             "QuestionHolder.label": "“O melhor do \nBrasil é o \nbrasileiro”\numa carta contém \npalavras formadas\npor um sufixo \nsemelhante ao da\npalavra \"mineiro\"",
             "x": 112,
-            "y": 160
+            "y": 240
         },
         {
             "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
@@ -62,7 +62,7 @@
             "QuestionHolder.itemName": "question1",
             "QuestionHolder.label": "Encontre a carta\ncuja palavra é \nformada pelo \nacréscimo de \num sufixo",
             "x": 304,
-            "y": 160
+            "y": 240
         },
         {
             "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
@@ -75,7 +75,7 @@
             "components": [],
             "QuestionHolder.label": "Cearense, \nItaliano, \nPernambucano,\nParaense",
             "x": 496,
-            "y": 160
+            "y": 240
         },
         {
             "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
@@ -87,9 +87,9 @@
             "label": "card_1_1_1",
             "components": [],
             "QuestionHolder.itemName": "question3",
-            "QuestionHolder.label": "a) ( ) acidez e laranjal\nb) ( ) confortável e cortesia\nc) ( ) economista e passeata\nd) ( ) estudioso e ganância\ne) ( ) grandeza e tolerância\n\n????",
+            "QuestionHolder.label": "Grandieza,\nTolerância",
             "x": 688,
-            "y": 160
+            "y": 240
         },
         {
             "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
@@ -103,7 +103,7 @@
             "QuestionHolder.itemName": "question3",
             "QuestionHolder.label": "Ache a carta \nque contém \npalavras com \nos sinônimos dos \nsufixos de \nsustentabilidade e \nperpetuação, \nRESPECTIVAMENTE\n",
             "x": 112,
-            "y": 384
+            "y": 464
         },
         {
             "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
@@ -117,7 +117,7 @@
             "QuestionHolder.itemName": "question2",
             "QuestionHolder.label": "Ache a carta em \nque o par de \nsufixos possui\no mesmo valor \nsemântico dos \nsufixos de boiada\ne dentada\n",
             "x": 304,
-            "y": 384
+            "y": 464
         },
         {
             "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
@@ -129,9 +129,9 @@
             "label": "card_4",
             "components": [],
             "QuestionHolder.itemName": "question2",
-            "QuestionHolder.label": "a) ( ) pincelada / cartada\nb) ( ) folhagem/ facada\nc) ( ) gritaria/ peneira\nd) ( ) aprendizagem/ vasilhame\n\n??????????????",
+            "QuestionHolder.label": "Folhagem,\nFacada",
             "x": 496,
-            "y": 384
+            "y": 464
         },
         {
             "prefabId": "416663f2-2ba7-4ecd-a43e-3cd186fa1b40",
@@ -143,9 +143,28 @@
             "label": "card_5",
             "components": [],
             "QuestionHolder.itemName": "question1",
-            "QuestionHolder.label": "a) ( ) imprensa\nb) ( ) descobrir\nc) ( ) reforma\nd) ( ) irracional\ne) ( ) rigidez\n\n??????????????????????????",
+            "QuestionHolder.label": "Rigidez",
             "x": 688,
-            "y": 384
+            "y": 464
+        },
+        {
+            "type": "Text",
+            "id": "f6934060-556a-46c9-b428-dd0ff32ce1be",
+            "label": "txt_countdown",
+            "scope": "CLASS",
+            "components": [
+                "Countdown"
+            ],
+            "x": 352,
+            "y": 80,
+            "scaleX": 0.702820375578614,
+            "scaleY": 0.702820375578614,
+            "originX": 0,
+            "originY": 0,
+            "text": "60",
+            "align": "center",
+            "fontSize": "64px",
+            "color": "#ffffffff"
         }
     ],
     "plainObjects": [],

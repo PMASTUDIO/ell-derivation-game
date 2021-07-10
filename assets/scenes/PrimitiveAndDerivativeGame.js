@@ -75,6 +75,13 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		txt_ans2.setStyle({"color":"#000000ff","fixedWidth":306,"fixedHeight":630,"fontFamily":"Arial","fontSize":"32px"});
 		txt_ans2.setPadding({"left":10,"right":10});
 		
+		// txt_inst
+		const txt_inst = this.add.text(224, 160, "", {});
+		txt_inst.scaleX = 0.5853658431827811;
+		txt_inst.scaleY = 0.5853658431827811;
+		txt_inst.text = "Observei que uma de suas melhores\nhabilidades é se jogar com estilo,\nvamos ver se ela é útil.\nUse as setas ⇆ para se jogar\nna resposta certa antes do tempo\nacabar.";
+		txt_inst.setStyle({"color":"#ff0101ff","fontSize":"32px","fontStyle":"bold"});
+		
 		// txt_countdown (components)
 		new Countdown(txt_countdown);
 		txt_countdown.emit("components-awake");
@@ -83,6 +90,7 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		this.txt_question = txt_question;
 		this.txt_ans1 = txt_ans1;
 		this.txt_ans2 = txt_ans2;
+		this.txt_inst = txt_inst;
 	}
 	
 	/** @type {Phaser.GameObjects.Text} */
@@ -93,6 +101,8 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 	txt_ans1;
 	/** @type {Phaser.GameObjects.Text} */
 	txt_ans2;
+	/** @type {Phaser.GameObjects.Text} */
+	txt_inst;
 	
 	/* START-USER-CODE */
 	/** @type {Phaser.GameObjects.Rectangle | Phaser.Physics.Matter.Image} */
@@ -146,11 +156,15 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		});
 
 		this.keys.right.on('down', () => {
+			this.txt_inst.destroy();
+
 			this.sound.play('men-scream')
 			this.character.applyForce(new Phaser.Math.Vector2(2, 0))
 			this.character.setAngularVelocity(2)
 		})
 		this.keys.left.on('down', () => {
+			this.txt_inst.destroy();
+
 			this.sound.play('men-scream')
 			this.character.applyForce(new Phaser.Math.Vector2(-2, 0))
 			this.character.setAngularVelocity(-2)

@@ -28,11 +28,11 @@
             "components": [],
             "x": 76,
             "y": 32,
-            "scaleX": 0.6273940932700888,
-            "scaleY": 0.6273940932700888,
+            "scaleX": 0.512638734171047,
+            "scaleY": 0.512638734171047,
             "originX": 0,
             "originY": 0,
-            "text": "Errado... Tente novamente...",
+            "text": "Você perdeu, mas duolingo é\nmisericordioso, Tente novamente...",
             "fontSize": "64px"
         },
         {

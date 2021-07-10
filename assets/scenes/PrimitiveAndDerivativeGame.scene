@@ -84,6 +84,23 @@
             "fontFamily": "Arial",
             "fontSize": "32px",
             "color": "#000000ff"
+        },
+        {
+            "type": "Text",
+            "id": "808cf680-1ffd-498d-8691-cfae2c8c4089",
+            "label": "txt_inst",
+            "scope": "CLASS",
+            "components": [],
+            "x": 224,
+            "y": 160,
+            "scaleX": 0.5853658431827811,
+            "scaleY": 0.5853658431827811,
+            "originX": 0,
+            "originY": 0,
+            "text": "Observei que uma de suas melhores\nhabilidades é se jogar com estilo,\nvamos ver se ela é útil.\nUse as setas ⇆ para se jogar\nna resposta certa antes do tempo\nacabar.",
+            "fontSize": "32px",
+            "fontStyle": "bold",
+            "color": "#ff0101ff"
         }
     ],
     "plainObjects": [],

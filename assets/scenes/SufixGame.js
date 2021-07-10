@@ -28,41 +28,48 @@ class SufixGame extends Phaser.Scene {
 		
 		// txt_label
 		const txt_label = this.add.text(24, 18, "", {});
-		txt_label.text = "E aí, consegue um desafio mais intelectual?";
+		txt_label.text = "E aí, consegue um desafio mais intelectual?\n(jogo da memória)";
 		txt_label.setStyle({"fixedHeight":50,"fontSize":"26px","fontStyle":"bold"});
 		txt_label.setPadding({"left":2});
 		
 		// card
-		const card = new Card(this, 112, 160);
+		const card = new Card(this, 112, 240);
 		this.add.existing(card);
 		
 		// card_1
-		const card_1 = new Card(this, 304, 160);
+		const card_1 = new Card(this, 304, 240);
 		this.add.existing(card_1);
 		
 		// card_1_1
-		const card_1_1 = new Card(this, 496, 160);
+		const card_1_1 = new Card(this, 496, 240);
 		this.add.existing(card_1_1);
 		
 		// card_1_1_1
-		const card_1_1_1 = new Card(this, 688, 160);
+		const card_1_1_1 = new Card(this, 688, 240);
 		this.add.existing(card_1_1_1);
 		
 		// card_2
-		const card_2 = new Card(this, 112, 384);
+		const card_2 = new Card(this, 112, 464);
 		this.add.existing(card_2);
 		
 		// card_3
-		const card_3 = new Card(this, 304, 384);
+		const card_3 = new Card(this, 304, 464);
 		this.add.existing(card_3);
 		
 		// card_4
-		const card_4 = new Card(this, 496, 384);
+		const card_4 = new Card(this, 496, 464);
 		this.add.existing(card_4);
 		
 		// card_5
-		const card_5 = new Card(this, 688, 384);
+		const card_5 = new Card(this, 688, 464);
 		this.add.existing(card_5);
+		
+		// txt_countdown
+		const txt_countdown = this.add.text(352, 80, "", {});
+		txt_countdown.scaleX = 0.702820375578614;
+		txt_countdown.scaleY = 0.702820375578614;
+		txt_countdown.text = "60";
+		txt_countdown.setStyle({"align":"center","color":"#ffffffff","fontSize":"64px"});
 		
 		// lists
 		const cards = [card_5, card_4, card_3, card_2, card, card_1, card_1_1, card_1_1_1]
@@ -86,7 +93,7 @@ class SufixGame extends Phaser.Scene {
 		// card_1_1_1 (components)
 		const card_1_1_1QuestionHolder = QuestionHolder.getComponent(card_1_1_1);
 		card_1_1_1QuestionHolder.itemName = "question3";
-		card_1_1_1QuestionHolder.label = "a) ( ) acidez e laranjal\nb) ( ) confortável e cortesia\nc) ( ) economista e passeata\nd) ( ) estudioso e ganância\ne) ( ) grandeza e tolerância\n\n????";
+		card_1_1_1QuestionHolder.label = "Grandieza,\nTolerância";
 		card_1_1_1.emit("components-awake");
 		
 		// card_2 (components)
@@ -104,18 +111,25 @@ class SufixGame extends Phaser.Scene {
 		// card_4 (components)
 		const card_4QuestionHolder = QuestionHolder.getComponent(card_4);
 		card_4QuestionHolder.itemName = "question2";
-		card_4QuestionHolder.label = "a) ( ) pincelada / cartada\nb) ( ) folhagem/ facada\nc) ( ) gritaria/ peneira\nd) ( ) aprendizagem/ vasilhame\n\n??????????????";
+		card_4QuestionHolder.label = "Folhagem,\nFacada";
 		card_4.emit("components-awake");
 		
 		// card_5 (components)
 		const card_5QuestionHolder = QuestionHolder.getComponent(card_5);
 		card_5QuestionHolder.itemName = "question1";
-		card_5QuestionHolder.label = "a) ( ) imprensa\nb) ( ) descobrir\nc) ( ) reforma\nd) ( ) irracional\ne) ( ) rigidez\n\n??????????????????????????";
+		card_5QuestionHolder.label = "Rigidez";
 		card_5.emit("components-awake");
 		
+		// txt_countdown (components)
+		new Countdown(txt_countdown);
+		txt_countdown.emit("components-awake");
+		
+		this.txt_countdown = txt_countdown;
 		this.cards = cards;
 	}
 	
+	/** @type {Phaser.GameObjects.Text} */
+	txt_countdown;
 	/** @type {Card[]} */
 	cards;
 	
@@ -199,8 +213,20 @@ class SufixGame extends Phaser.Scene {
 		
 	}
 
-	create() {
+	timeOut = () => {
+		this.txt_countdown.setColor('0xff0000')
+		this.time.delayedCall(3000, () => {
+			this.scene.start("LostScene", { sceneToReturn: 'SufixGame' })
+		})
+	}
+
+	create(data) {
 	
+		if(data.reset){
+			this.matchesCount = 0;
+			this.selectedBoxes = []
+		}
+
 		this.editorCreate();
 
 		this.cards.forEach((c, i) => {
@@ -210,7 +236,9 @@ class SufixGame extends Phaser.Scene {
 				this.handleCardSelection(c)
 			})
 		})
-	  
+		
+		Countdown.getComponent(this.txt_countdown).start(this.timeOut, 60000)
+		
 	}
 	
 	/* END-USER-CODE */

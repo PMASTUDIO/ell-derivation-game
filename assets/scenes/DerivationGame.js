@@ -24,7 +24,19 @@ class DerivationGame extends Phaser.Scene {
 		const label_main = this.add.text(242, 22, "", {});
 		label_main.text = "Neymar joga Golf";
 		label_main.setStyle({"fontSize":"32px"});
+		
+		// txt_inst
+		const txt_inst = this.add.text(471, 95, "", {});
+		txt_inst.scaleX = 0.674011695243739;
+		txt_inst.scaleY = 0.674011695243739;
+		txt_inst.text = "Arraste com o mouse para\nacertar a bola no buraco \ncom a reposta certa.";
+		txt_inst.setStyle({"color":"#ff0101ff","fontSize":"32px"});
+		
+		this.txt_inst = txt_inst;
 	}
+	
+	/** @type {Phaser.GameObjects.Text} */
+	txt_inst;
 	
 	/* START-USER-CODE */
 	
@@ -122,14 +134,14 @@ class DerivationGame extends Phaser.Scene {
 		this.arrow = this.add.image(400, 350, 'arrow');
 		this.arrow.setAlpha(0);
 
-		this.ground = this.matter.add.image(408, 504, "ground");
+		this.ground = this.matter.add.image(408, 560, "ground");
 
 		// #TODO: Try to move the static and mass call to below set rectangle
-		this.ground.setStatic(true);
 		this.ground.setMass(Infinity);
 		this.ground.setRectangle(10000, 500)
 		this.ground.scaleX = 0.09639380174890047;
 		this.ground.scaleY = 0.15478184296590694;
+		this.ground.setStatic(true);
 
 		this.ball = this.matter.add.image(100, 400, 'golf-ball');
 		
@@ -150,7 +162,7 @@ class DerivationGame extends Phaser.Scene {
 		for (let i = 0; i < 4; i++){
 			this.hole_answers[i] = this.matter.add.image(
 				this.txt_ans[i].x + (this.txt_ans[i].width / 2), 
-				this.txt_ans[i].y + 10 + (this.txt_ans[i].height / 2), 
+				520, 
 			"golf-hole")
 			this.hole_answers[i].setDepth(98)
 			this.hole_answers[i].setSensor(true)

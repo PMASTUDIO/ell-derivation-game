@@ -22,7 +22,7 @@ class BossFight extends Phaser.Scene {
 			{
 				question: "O prefixo assinalado em “𝐝𝐞𝐬vario” expressa:",
 				alternatives: ["negação", "cessação", "ação contrária.", "separação", "intensificação"],
-				correct_index: 0
+				correct_index: 2
 			},
 			{
 				question: "Assinale a alternativa com uma primitiva e\nsua respectiva derivada: (prim/deriv)",

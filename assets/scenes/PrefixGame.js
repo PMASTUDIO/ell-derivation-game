@@ -15,12 +15,12 @@ class PrefixGame extends Phaser.Scene {
 			{
 				question: "“A criança foi castigada i͟n͟j͟u͟s͟t͟a͟m͟e͟n͟t͟e͟.”.\nCom relação à palavra sublinhada, marque que\n alternativa revela seu processo de formação:",
 				alternatives: ["um radical grego e um sufixo formador de advérbio.", "um prefixo e um radical latino.", "dois afixos e um radical latino.", " um prefixo, um radical popular e um sufixo.", "um prefixo, um radical grego e um sufixo adverbial."],
-				correct_index: 0
+				correct_index: 1
 			},
 			{
 				question: "Processo de formação da palavra sossego:",
 				alternatives: ["derivação prefixal e radical latino.", "derivação prefixal e radical grego.", "derivação parassintética.", "composição por aglutinação.", "composição por justaposição"],
-				correct_index: 2
+				correct_index: 0
 			},
 			{
 				question: "A palavra invencível é formada com prefixo in-, que exprime\nsentido de negação. Outra palavra formada com esse mesmo\nprefixo de negação está em letra maiúscula em:",
@@ -30,7 +30,7 @@ class PrefixGame extends Phaser.Scene {
 			{
 				question: "O prefixo presente na palavra “transpostos” tem\n o mesmo sentido do prefixo que ocorre em:",
 				alternatives: ["percorrido", "ultrapassado", "retrocedido", "introvertido", "infracolocado"],
-				correct_index: 2
+				correct_index: 1
 			},
 		];
 
@@ -148,6 +148,13 @@ class PrefixGame extends Phaser.Scene {
 		txt_ans1.text = "New text 𝐡𝐞𝐲";
 		txt_ans1.setStyle({"color":"#000000ff","fixedWidth":800,"fixedHeight":70,"fontFamily":"arial","fontSize":"32px","maxLines":2});
 		
+		// txt_inst
+		const txt_inst = this.add.text(15, 27, "", {});
+		txt_inst.scaleX = 0.5853658431827811;
+		txt_inst.scaleY = 0.5853658431827811;
+		txt_inst.text = "Vamos ver se você consegue fazer\nvárias coisas ao mesmo tempo.\nAperte barra de espaço \nrepetidamente para nadar,\nenquanto responde às perguntas\ncom o mouse.";
+		txt_inst.setStyle({"color":"#ff0101ff","fontSize":"32px","fontStyle":"bold"});
+		
 		// lists
 		const ansBox = [bg_ans1, bg_ans2, bg_ans3, bg_ans4, bg_ans5]
 		const ansText = [txt_ans1, txt_ans2, txt_ans3, txt_ans4, txt_ans5]
@@ -160,6 +167,7 @@ class PrefixGame extends Phaser.Scene {
 		this.bg_ans3 = bg_ans3;
 		this.bg_ans2 = bg_ans2;
 		this.bg_ans1 = bg_ans1;
+		this.txt_inst = txt_inst;
 		this.ansBox = ansBox;
 		this.ansText = ansText;
 	}
@@ -180,6 +188,8 @@ class PrefixGame extends Phaser.Scene {
 	bg_ans2;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	bg_ans1;
+	/** @type {Phaser.GameObjects.Text} */
+	txt_inst;
 	/** @type {Phaser.GameObjects.Rectangle[]} */
 	ansBox;
 	/** @type {Phaser.GameObjects.Text[]} */

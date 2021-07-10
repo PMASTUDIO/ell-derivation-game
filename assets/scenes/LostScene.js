@@ -26,9 +26,9 @@ class LostScene extends Phaser.Scene {
 		
 		// text
 		const text = this.add.text(76, 32, "", {});
-		text.scaleX = 0.6273940932700888;
-		text.scaleY = 0.6273940932700888;
-		text.text = "Errado... Tente novamente...";
+		text.scaleX = 0.512638734171047;
+		text.scaleY = 0.512638734171047;
+		text.text = "Você perdeu, mas duolingo é\nmisericordioso, Tente novamente...";
 		text.setStyle({"fontSize":"64px"});
 		
 		// rectangle_1

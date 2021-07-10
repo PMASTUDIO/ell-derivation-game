@@ -255,6 +255,23 @@
             "fontSize": "32px",
             "color": "#000000ff",
             "maxLines": 2
+        },
+        {
+            "type": "Text",
+            "id": "22838b01-cb69-4fa1-b4fc-1ba21cb1f08c",
+            "label": "txt_inst",
+            "scope": "CLASS",
+            "components": [],
+            "x": 15,
+            "y": 27,
+            "scaleX": 0.5853658431827811,
+            "scaleY": 0.5853658431827811,
+            "originX": 0,
+            "originY": 0,
+            "text": "Vamos ver se você consegue fazer\nvárias coisas ao mesmo tempo.\nAperte barra de espaço \nrepetidamente para nadar,\nenquanto responde às perguntas\ncom o mouse.",
+            "fontSize": "32px",
+            "fontStyle": "bold",
+            "color": "#ff0101ff"
         }
     ],
     "plainObjects": [],
