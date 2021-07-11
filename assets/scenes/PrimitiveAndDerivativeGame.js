@@ -1,7 +1,7 @@
 
 // You can write more code here
 
-currentQuestionIndex = 0;
+currentQuestionIndex_PrimDer = 0;
 
 /* START OF COMPILED CODE */
 
@@ -125,9 +125,9 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 
 			this.time.delayedCall(3000, () => {
 
-				if(currentQuestionIndex < 3){
+				if(currentQuestionIndex_PrimDer < 3){
 					// LOAD NEXT LEVEL
-					currentQuestionIndex++;
+					currentQuestionIndex_PrimDer++;
 					this.scene.restart();
 				} else {
 					// WON!
@@ -185,7 +185,7 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		this.editorCreate();
 
 		if(data.reset){
-			currentQuestionIndex = 0;
+			currentQuestionIndex_PrimDer = 0;
 			data.reset = undefined;
 		}
 
@@ -242,7 +242,7 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		this.txt_ans1.setDepth(6)
 		this.txt_ans2.setDepth(6)
 
-		this.loadQuestion(currentQuestionIndex)
+		this.loadQuestion(currentQuestionIndex_PrimDer)
 
 		this.handleInput();
 

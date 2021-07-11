@@ -1,6 +1,6 @@
 
 // You can write more code here
-currentQuestionIndex = 0;
+currentQuestionIndex_Der = 0;
 
 /* START OF COMPILED CODE */
 
@@ -97,8 +97,8 @@ class DerivationGame extends Phaser.Scene {
 	}
 
 	answeredRight = () => {
-		if(this.questions.length > currentQuestionIndex + 1){
-			currentQuestionIndex++;
+		if(this.questions.length > currentQuestionIndex_Der + 1){
+			currentQuestionIndex_Der++;
 		} else {
 			// NEXT LEVEL 
 			console.log("NEXT LEVEL!")
@@ -111,7 +111,7 @@ class DerivationGame extends Phaser.Scene {
 			right.removeFromDisplayList();
 
 			// NEXT QUESTION UNTIL THERE ARE NO QUESTIONS
-			console.log("Starting scene " + currentQuestionIndex)
+			console.log("Starting scene " + currentQuestionIndex_Der)
 			this.scene.restart();
 		}, [], this);
 	}
@@ -189,7 +189,7 @@ class DerivationGame extends Phaser.Scene {
 	create(data) {
 		
 		if(data.reset){
-			currentQuestionIndex = 0;
+			currentQuestionIndex_Der = 0;
 			data.reset = undefined;
 		}
 
@@ -204,7 +204,7 @@ class DerivationGame extends Phaser.Scene {
 
 		this.editorCreate();
 
-		this.initScene(currentQuestionIndex);
+		this.initScene(currentQuestionIndex_Der);
 
 		this.time.delayedCall(2000, () => {
 			this.input.on('pointerdown', () => {
