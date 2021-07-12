@@ -75,12 +75,34 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		txt_ans2.setStyle({"color":"#000000ff","fixedWidth":306,"fixedHeight":630,"fontFamily":"Arial","fontSize":"32px"});
 		txt_ans2.setPadding({"left":10,"right":10});
 		
+		// Instruction
+		const instruction = this.add.container(176, -16);
+		instruction.scaleX = 0.8108422425368454;
+		instruction.scaleY = 0.8108422425368454;
+		instruction.angle = 2;
+		
+		// evil_duolingo
+		const evil_duolingo = this.add.image(786, 241, "evil-duolingo");
+		evil_duolingo.scaleX = 0.200625072933595;
+		evil_duolingo.scaleY = 0.200625072933595;
+		evil_duolingo.angle = -29;
+		instruction.add(evil_duolingo);
+		
+		// image
+		const image = this.add.image(589, 123, "speech-bg");
+		image.scaleX = 0.2590335352405082;
+		image.scaleY = 0.2590335352405082;
+		image.angle = -8;
+		instruction.add(image);
+		
 		// txt_inst
-		const txt_inst = this.add.text(224, 160, "", {});
-		txt_inst.scaleX = 0.5853658431827811;
-		txt_inst.scaleY = 0.5853658431827811;
+		const txt_inst = this.add.text(447, 31, "", {});
+		txt_inst.scaleX = 0.5;
+		txt_inst.scaleY = 0.5;
+		txt_inst.angle = -6;
 		txt_inst.text = "Observei que uma de suas melhores\nhabilidades é se jogar com estilo,\nvamos ver se ela é útil.\nUse as setas ⇆ para se jogar\nna resposta certa antes do tempo\nacabar.";
-		txt_inst.setStyle({"color":"#ff0101ff","fontSize":"32px","fontStyle":"bold"});
+		txt_inst.setStyle({"color":"#ffffffff","fontFamily":"OtomanopeeOne","fontSize":"32px"});
+		instruction.add(txt_inst);
 		
 		// txt_countdown (components)
 		new Countdown(txt_countdown);
@@ -90,6 +112,7 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		this.txt_question = txt_question;
 		this.txt_ans1 = txt_ans1;
 		this.txt_ans2 = txt_ans2;
+		this.instruction = instruction;
 		this.txt_inst = txt_inst;
 	}
 	
@@ -101,6 +124,8 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 	txt_ans1;
 	/** @type {Phaser.GameObjects.Text} */
 	txt_ans2;
+	/** @type {Phaser.GameObjects.Container} */
+	instruction;
 	/** @type {Phaser.GameObjects.Text} */
 	txt_inst;
 	
@@ -121,7 +146,7 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		
 			this.activeAnswerI == 0 ? this.bg_ans1.setFillStyle('0x00ff00') : this.bg_ans2.setFillStyle('0x00ff00')
 
-			this.add.image(373.1230665371493, 340.8866708785447, "gol").setDepth(1000);
+			this.add.image(373.1230665371493, 340.8866708785447, "gol").setDepth(99);
 
 			this.time.delayedCall(3000, () => {
 
@@ -246,7 +271,10 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 
 		this.handleInput();
 
-		Countdown.getComponent(this.txt_countdown).start(this.evalAnswer, 20000)
+		this.time.delayedCall(5000, () => {
+			this.instruction.setAlpha(0)
+			Countdown.getComponent(this.txt_countdown).start(this.evalAnswer, 20000)
+		})
 	}
 
 	update(){

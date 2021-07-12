@@ -11,17 +11,25 @@
 	<script src="assets/scenes/LoadingSpinner.js"></script>
 	<script src="main.js"></script>
 
+	<link rel="preload" as="font" href="assets/fonts/OtomanopeeOne-Regular.ttf" type="font/ttf" />
+
 	<style>
 		body {
 			background: #2f2f2f;
 			margin: 0;
 			padding: 0;
 		}
+
+		@font-face {
+			font-family: 'OtomanopeeOne';
+			src: url('assets/fonts/OtomanopeeOne-Regular.ttf');
+		}
 	</style>
 
 </head>
 
 <body>
+	<div style="font-family:OtomanopeeOne; position: absolute; left:-1000px; visibility:hidden;">.</div>
 	<div class="game"></div>
 </body>
 

@@ -20,20 +20,57 @@
             "fontSize": "32px"
         },
         {
-            "type": "Text",
-            "id": "9dab1204-45b2-4d63-8924-5e6c25fc003f",
-            "label": "txt_inst",
+            "type": "Container",
+            "id": "0ee39af3-3fa6-4541-abaa-5ea90fe7a563",
+            "label": "Instruction",
             "scope": "CLASS",
             "components": [],
-            "x": 471,
-            "y": 95,
-            "scaleX": 0.674011695243739,
-            "scaleY": 0.674011695243739,
-            "originX": 0,
-            "originY": 0,
-            "text": "Arraste com o mouse para\nacertar a bola no buraco \ncom a reposta certa.",
-            "fontSize": "32px",
-            "color": "#ff0101ff"
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "c027afd9-a6ac-47e8-855b-bffa1d3cb1e5",
+                    "label": "image",
+                    "components": [],
+                    "texture": {
+                        "key": "speech-bg"
+                    },
+                    "x": 614,
+                    "y": 159,
+                    "scaleX": 0.24270534305327626,
+                    "scaleY": 0.20426496429422852
+                },
+                {
+                    "type": "Image",
+                    "id": "c9d9da02-e690-4053-a26e-b32c1418c80c",
+                    "label": "evil_duolingo",
+                    "components": [],
+                    "texture": {
+                        "key": "evil-duolingo"
+                    },
+                    "x": 809,
+                    "y": 315,
+                    "scaleX": 0.200625072933595,
+                    "scaleY": 0.200625072933595,
+                    "angle": -29
+                },
+                {
+                    "type": "Text",
+                    "id": "9dab1204-45b2-4d63-8924-5e6c25fc003f",
+                    "label": "txt_inst",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 472,
+                    "y": 86,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Arraste com o mouse para\nacertar a bola no buraco \ncom a reposta certa.",
+                    "fontFamily": "OtomanopeeOne",
+                    "fontSize": "32px",
+                    "color": "#ffffffff"
+                }
+            ]
         }
     ],
     "plainObjects": [],

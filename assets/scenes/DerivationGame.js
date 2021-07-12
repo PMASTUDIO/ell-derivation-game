@@ -25,16 +25,36 @@ class DerivationGame extends Phaser.Scene {
 		label_main.text = "Neymar joga Golf";
 		label_main.setStyle({"fontSize":"32px"});
 		
-		// txt_inst
-		const txt_inst = this.add.text(471, 95, "", {});
-		txt_inst.scaleX = 0.674011695243739;
-		txt_inst.scaleY = 0.674011695243739;
-		txt_inst.text = "Arraste com o mouse para\nacertar a bola no buraco \ncom a reposta certa.";
-		txt_inst.setStyle({"color":"#ff0101ff","fontSize":"32px"});
+		// Instruction
+		const instruction = this.add.container(0, 0);
 		
+		// image
+		const image = this.add.image(614, 159, "speech-bg");
+		image.scaleX = 0.24270534305327626;
+		image.scaleY = 0.20426496429422852;
+		instruction.add(image);
+		
+		// evil_duolingo
+		const evil_duolingo = this.add.image(809, 315, "evil-duolingo");
+		evil_duolingo.scaleX = 0.200625072933595;
+		evil_duolingo.scaleY = 0.200625072933595;
+		evil_duolingo.angle = -29;
+		instruction.add(evil_duolingo);
+		
+		// txt_inst
+		const txt_inst = this.add.text(472, 86, "", {});
+		txt_inst.scaleX = 0.6;
+		txt_inst.scaleY = 0.6;
+		txt_inst.text = "Arraste com o mouse para\nacertar a bola no buraco \ncom a reposta certa.";
+		txt_inst.setStyle({"color":"#ffffffff","fontFamily":"OtomanopeeOne","fontSize":"32px"});
+		instruction.add(txt_inst);
+		
+		this.instruction = instruction;
 		this.txt_inst = txt_inst;
 	}
 	
+	/** @type {Phaser.GameObjects.Container} */
+	instruction;
 	/** @type {Phaser.GameObjects.Text} */
 	txt_inst;
 	
@@ -227,6 +247,8 @@ class DerivationGame extends Phaser.Scene {
 				console.log(XVector)
 
 				this.sound.play('golf')
+
+				this.instruction.setAlpha(0)
 			});
 		})
 

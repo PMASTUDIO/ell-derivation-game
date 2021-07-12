@@ -20,6 +20,30 @@
             "y": 538,
             "scaleX": 0.18046466104384898,
             "scaleY": 0.18046466104384898
+        },
+        {
+            "prefabId": "2998493f-d676-4de2-96b6-777b1d755988",
+            "id": "7473c65f-b255-4f3b-8a98-f45054e8484b",
+            "label": "writingTextPrefab",
+            "scope": "CLASS",
+            "components": [],
+            "x": 49,
+            "y": 43
+        },
+        {
+            "type": "Image",
+            "id": "b97b0c57-370d-405b-a4d4-20b9d2cf6261",
+            "label": "evil_duolingo",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "evil-duolingo"
+            },
+            "x": 39,
+            "y": 748,
+            "scaleX": 0.3,
+            "scaleY": 0.3,
+            "angle": 21
         }
     ],
     "plainObjects": [],

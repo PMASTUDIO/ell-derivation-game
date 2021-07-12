@@ -9,7 +9,16 @@ class LostScene extends Phaser.Scene {
 		super("LostScene");
 		
 		/* START-USER-CTR-CODE */
-		this.videosLinks = ["https://www.youtube.com/embed/izQCx9BzzSY", "https://www.youtube.com/embed/Pgc5ipQ9bFE"];
+		this.videosLinks = [
+			"https://www.youtube.com/embed/3ZllGmspqnw",
+			"https://www.youtube.com/embed/TEmBTVLIL1Y",
+			"https://www.youtube.com/embed/_SVyQDDBzEE",
+			"https://www.youtube.com/embed/b4xWOXLCFsk",
+			"https://www.youtube.com/embed/Fu32fEiXhyI",
+			"https://www.youtube.com/embed/AsxgvQKRhHA",
+			"https://www.youtube.com/embed/uToPiNZYLc8",
+			"https://www.youtube.com/embed/1NKa3NquubU"
+		];
 		this.randomVideoI = Math.floor(Math.random() * this.videosLinks.length)
 		this.sceneToReturn = undefined
 		/* END-USER-CTR-CODE */
@@ -59,7 +68,7 @@ class LostScene extends Phaser.Scene {
 		const video = this.add
 			.dom(350, 400)
 			.createFromHTML(
-				`<iframe width="560" height="315" src="${this.videosLinks[this.randomVideoI]}?controls=0" title="Meme Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+				`<iframe width="560" height="315" src="${this.videosLinks[this.randomVideoI]}?rel=0&version=3&autoplay=1&controls=0&showinfo=0&loop=1" title="Meme Player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay" allowfullscreen></iframe>`
 			);
 
 		this.return_btn.setInteractive().on('pointerdown', (ptr) => {

@@ -192,6 +192,11 @@
                 "key": "shout"
             },
             {
+                "url": "assets/speech-bg.png",
+                "type": "image",
+                "key": "speech-bg"
+            },
+            {
                 "url": "assets/scenes/SufixGame.js",
                 "type": "sceneFile",
                 "key": "SufixGame"
@@ -292,6 +297,11 @@
                 "url": "assets/swim-spritesheet/tile015.png",
                 "type": "image",
                 "key": "tile015"
+            },
+            {
+                "url": "prefabs/WritingTextPrefab.js",
+                "type": "script",
+                "key": "WritingTextPrefab"
             }
         ]
     },

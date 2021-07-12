@@ -37,6 +37,8 @@ class PrefixGame extends Phaser.Scene {
 		this.activeQuestion = null;
 		this.currentQuestionIndex = 0;
 
+		this.started = false
+
 		/* END-USER-CTR-CODE */
 	}
 	
@@ -61,20 +63,20 @@ class PrefixGame extends Phaser.Scene {
 		rectangle.fillColor = 54237;
 		
 		// bg_quiz
-		const bg_quiz = this.add.rectangle(592, 160, 128, 128);
+		const bg_quiz = this.add.rectangle(214, 160, 128, 128);
 		bg_quiz.scaleX = 3.3071655254891805;
 		bg_quiz.scaleY = 2.3925613322157204;
 		bg_quiz.isFilled = true;
 		
 		// txt_quest
-		const txt_quest = this.add.text(383, 7, "", {});
+		const txt_quest = this.add.text(5, 7, "", {});
 		txt_quest.scaleX = 0.4902671930598873;
 		txt_quest.scaleY = 0.4902671930598873;
 		txt_quest.text = "Question\n";
 		txt_quest.setStyle({"color":"#000000ff","fontFamily":"Arial","fontSize":"26px","maxLines":3});
 		
 		// bg_ans5
-		const bg_ans5 = this.add.rectangle(592, 272, 400, 40);
+		const bg_ans5 = this.add.rectangle(214, 272, 400, 40);
 		bg_ans5.isFilled = true;
 		bg_ans5.fillColor = 15263976;
 		bg_ans5.isStroked = true;
@@ -82,7 +84,7 @@ class PrefixGame extends Phaser.Scene {
 		bg_ans5.lineWidth = 2;
 		
 		// bg_ans4
-		const bg_ans4 = this.add.rectangle(592, 224, 400, 40);
+		const bg_ans4 = this.add.rectangle(214, 224, 400, 40);
 		bg_ans4.isFilled = true;
 		bg_ans4.fillColor = 15263976;
 		bg_ans4.isStroked = true;
@@ -90,7 +92,7 @@ class PrefixGame extends Phaser.Scene {
 		bg_ans4.lineWidth = 2;
 		
 		// bg_ans3
-		const bg_ans3 = this.add.rectangle(592, 176, 400, 40);
+		const bg_ans3 = this.add.rectangle(214, 176, 400, 40);
 		bg_ans3.isFilled = true;
 		bg_ans3.fillColor = 15263976;
 		bg_ans3.isStroked = true;
@@ -98,7 +100,7 @@ class PrefixGame extends Phaser.Scene {
 		bg_ans3.lineWidth = 2;
 		
 		// bg_ans2
-		const bg_ans2 = this.add.rectangle(592, 128, 400, 40);
+		const bg_ans2 = this.add.rectangle(214, 128, 400, 40);
 		bg_ans2.isFilled = true;
 		bg_ans2.fillColor = 15263976;
 		bg_ans2.isStroked = true;
@@ -106,7 +108,7 @@ class PrefixGame extends Phaser.Scene {
 		bg_ans2.lineWidth = 2;
 		
 		// bg_ans1
-		const bg_ans1 = this.add.rectangle(592, 80, 400, 40);
+		const bg_ans1 = this.add.rectangle(214, 80, 400, 40);
 		bg_ans1.isFilled = true;
 		bg_ans1.fillColor = 15263976;
 		bg_ans1.isStroked = true;
@@ -114,46 +116,63 @@ class PrefixGame extends Phaser.Scene {
 		bg_ans1.lineWidth = 2;
 		
 		// txt_ans5
-		const txt_ans5 = this.add.text(400, 256, "", {});
+		const txt_ans5 = this.add.text(22, 256, "", {});
 		txt_ans5.scaleX = 0.46983648850695375;
 		txt_ans5.scaleY = 0.46983648850695375;
 		txt_ans5.text = "New text 𝐡𝐞𝐲";
 		txt_ans5.setStyle({"color":"#000000ff","fixedWidth":800,"fixedHeight":70,"fontFamily":"arial","fontSize":"32px","maxLines":2});
 		
 		// txt_ans4
-		const txt_ans4 = this.add.text(400, 208, "", {});
+		const txt_ans4 = this.add.text(22, 208, "", {});
 		txt_ans4.scaleX = 0.46983648850695375;
 		txt_ans4.scaleY = 0.46983648850695375;
 		txt_ans4.text = "New text 𝐡𝐞𝐲";
 		txt_ans4.setStyle({"color":"#000000ff","fixedWidth":800,"fixedHeight":70,"fontFamily":"arial","fontSize":"32px","maxLines":2});
 		
 		// txt_ans3
-		const txt_ans3 = this.add.text(400, 160, "", {});
+		const txt_ans3 = this.add.text(22, 160, "", {});
 		txt_ans3.scaleX = 0.46983648850695375;
 		txt_ans3.scaleY = 0.46983648850695375;
 		txt_ans3.text = "New text 𝐡𝐞𝐲";
 		txt_ans3.setStyle({"color":"#000000ff","fixedWidth":800,"fixedHeight":70,"fontFamily":"arial","fontSize":"32px","maxLines":2});
 		
 		// txt_ans2
-		const txt_ans2 = this.add.text(400, 112, "", {});
+		const txt_ans2 = this.add.text(22, 112, "", {});
 		txt_ans2.scaleX = 0.46983648850695375;
 		txt_ans2.scaleY = 0.46983648850695375;
 		txt_ans2.text = "New text 𝐡𝐞𝐲";
 		txt_ans2.setStyle({"color":"#000000ff","fixedWidth":800,"fixedHeight":70,"fontFamily":"arial","fontSize":"32px","maxLines":2});
 		
 		// txt_ans1
-		const txt_ans1 = this.add.text(400, 64, "", {});
+		const txt_ans1 = this.add.text(22, 64, "", {});
 		txt_ans1.scaleX = 0.46983648850695375;
 		txt_ans1.scaleY = 0.46983648850695375;
 		txt_ans1.text = "New text 𝐡𝐞𝐲";
 		txt_ans1.setStyle({"color":"#000000ff","fixedWidth":800,"fixedHeight":70,"fontFamily":"arial","fontSize":"32px","maxLines":2});
 		
+		// Instruction
+		const instruction = this.add.container(3, 78);
+		
+		// image
+		const image = this.add.image(600, 70, "speech-bg");
+		image.scaleX = 0.2590335352405082;
+		image.scaleY = 0.2590335352405082;
+		instruction.add(image);
+		
+		// evil_duolingo
+		const evil_duolingo = this.add.image(786, 225, "evil-duolingo");
+		evil_duolingo.scaleX = 0.200625072933595;
+		evil_duolingo.scaleY = 0.200625072933595;
+		evil_duolingo.angle = -29;
+		instruction.add(evil_duolingo);
+		
 		// txt_inst
-		const txt_inst = this.add.text(15, 27, "", {});
-		txt_inst.scaleX = 0.5853658431827811;
-		txt_inst.scaleY = 0.5853658431827811;
+		const txt_inst = this.add.text(460, -33, "", {});
+		txt_inst.scaleX = 0.5;
+		txt_inst.scaleY = 0.5;
 		txt_inst.text = "Vamos ver se você consegue fazer\nvárias coisas ao mesmo tempo.\nAperte barra de espaço \nrepetidamente para nadar,\nenquanto responde às perguntas\ncom o mouse.";
-		txt_inst.setStyle({"color":"#ff0101ff","fontSize":"32px","fontStyle":"bold"});
+		txt_inst.setStyle({"color":"#ffffffff","fontFamily":"OtomanopeeOne","fontSize":"32px"});
+		instruction.add(txt_inst);
 		
 		// lists
 		const ansBox = [bg_ans1, bg_ans2, bg_ans3, bg_ans4, bg_ans5]
@@ -167,6 +186,7 @@ class PrefixGame extends Phaser.Scene {
 		this.bg_ans3 = bg_ans3;
 		this.bg_ans2 = bg_ans2;
 		this.bg_ans1 = bg_ans1;
+		this.instruction = instruction;
 		this.txt_inst = txt_inst;
 		this.ansBox = ansBox;
 		this.ansText = ansText;
@@ -188,6 +208,8 @@ class PrefixGame extends Phaser.Scene {
 	bg_ans2;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	bg_ans1;
+	/** @type {Phaser.GameObjects.Container} */
+	instruction;
 	/** @type {Phaser.GameObjects.Text} */
 	txt_inst;
 	/** @type {Phaser.GameObjects.Rectangle[]} */
@@ -264,7 +286,7 @@ class PrefixGame extends Phaser.Scene {
 		let space = this.input.keyboard.addKey('space');
 		space.on('down', () => {
 			if(this.swimming_neymar.y > 380){
-				this.swimming_neymar.setY(this.swimming_neymar.y - 10)
+				this.swimming_neymar.setY(this.swimming_neymar.y - 15)
 			}
 		})
 
@@ -273,9 +295,21 @@ class PrefixGame extends Phaser.Scene {
 		})
 
 		this.loadQuestion(this.currentQuestionIndex)
+
+		this.time.delayedCall(5000, () => {
+			this.instruction.setAlpha(0)
+		})
+
+		this.time.delayedCall(2000, () => {
+			this.started = true;
+		})
 	}
 	
 	update() {
+		if (!this.started){
+			return
+		}
+
 		this.swimming_neymar.setY(this.swimming_neymar.y + 1)
 	
 		if(this.swimming_neymar.y >= 500){

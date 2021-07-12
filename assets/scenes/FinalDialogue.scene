@@ -20,6 +20,21 @@
             "y": 532,
             "scaleX": 0.18046466104384898,
             "scaleY": 0.18046466104384898
+        },
+        {
+            "prefabId": "2998493f-d676-4de2-96b6-777b1d755988",
+            "id": "9ec3daa2-451e-458a-beb6-0c908dff238c",
+            "unlock": [
+                "scaleX",
+                "scaleY"
+            ],
+            "label": "writingTextPrefab",
+            "scope": "CLASS",
+            "components": [],
+            "x": 27,
+            "y": 30,
+            "scaleX": 0.4,
+            "scaleY": 0.4
         }
     ],
     "plainObjects": [],
