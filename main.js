@@ -8,10 +8,10 @@ window.addEventListener('load', function () {
         default: 'matter',
         matter: {
             enableSleeping: true,
-            // debug: {
+            //debug: {
             //   showBody: true,
             //   showStaticBody: true
-            // },
+            //},
             setBounds: {
               top: true,
               right: true,
@@ -37,6 +37,8 @@ window.addEventListener('load', function () {
   game.scene.add('Preloader', LoadingSpinner);
 });
 
+let main_music;
+
 class Boot extends Phaser.Scene {
   preload() {
     this.scene.launch('LoadingSpinner')
@@ -46,8 +48,8 @@ class Boot extends Phaser.Scene {
   create() {
     this.scene.stop("LoadingSpinner")
 
-    let music = this.sound.add('background-music', {loop:true, volume: 0.6});
-    music.play();
+    main_music = this.sound.add('Cuphead OST - Introduction [Music]', {loop:true, volume: 0.6});
+    main_music.play();
 
     this.scene.start('MenuScene');
   }

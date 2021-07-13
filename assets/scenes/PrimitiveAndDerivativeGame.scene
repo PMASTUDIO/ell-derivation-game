@@ -8,6 +8,19 @@
     },
     "displayList": [
         {
+            "type": "Image",
+            "id": "dc434942-946f-40ed-a0e4-31c662b07ff4",
+            "label": "sprite_explosion_fx_0001",
+            "components": [],
+            "texture": {
+                "key": "sprite_explosion_fx_0001"
+            },
+            "x": 439,
+            "y": 262,
+            "scaleX": 2.115761715579482,
+            "scaleY": 2.115761715579482
+        },
+        {
             "type": "Text",
             "id": "5d6b0d60-1bac-43bb-98ca-180116551d56",
             "label": "txt_countdown",

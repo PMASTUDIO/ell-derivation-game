@@ -43,17 +43,22 @@ class BossFight extends Phaser.Scene {
 	
 	editorCreate() {
 		
+		// sprite_explosion_fx_0001
+		const sprite_explosion_fx_0001 = this.add.image(409, 268, "sprite_explosion_fx_0001");
+		sprite_explosion_fx_0001.scaleX = 2.115761715579482;
+		sprite_explosion_fx_0001.scaleY = 2.115761715579482;
+		
 		// evil_duolingo
 		const evil_duolingo = this.add.image(268, 35, "evil-duolingo");
 		
 		// neymar_pointing
-		const neymar_pointing = this.add.image(655, 408, "neymar-pointing");
-		neymar_pointing.scaleX = 0.07311075498480107;
-		neymar_pointing.scaleY = 0.07311075498480107;
+		const neymar_pointing = this.add.image(655, 408, "neymar-standing");
+		neymar_pointing.scaleX = 0.08438632522497337;
+		neymar_pointing.scaleY = 0.08438632522497337;
 		
 		// QuizCont
 		const quizCont = this.add.container(223, 40);
-
+		
 		// bg_quiz
 		const bg_quiz = this.add.rectangle(209, 153, 128, 128);
 		bg_quiz.scaleX = 3.3071655254891805;
@@ -208,6 +213,10 @@ class BossFight extends Phaser.Scene {
 			// FINISH LEVEL SHOW WON AND REDIRECT TO MENU
 			let right = this.add.image(373.1230665371493, 340.8866708785447, "gol");
 
+			main_music.stop();
+			main_music = this.sound.add('champions', {loop:true, volume: 0.7});
+			main_music.play();
+
 			this.time.delayedCall(5000, () => {
 				console.log('WON!')
 				this.scene.start('MenuScene');
@@ -290,6 +299,8 @@ class BossFight extends Phaser.Scene {
 		})
 
 		this.loadQuestion(this.currentQuestionIndex)
+
+		this.sound.play('earthquake', { volume: 0.6 })
 	}
 
 	update(){
@@ -299,7 +310,7 @@ class BossFight extends Phaser.Scene {
 			this.evil_duolingo.applyForce(new Phaser.Math.Vector2(0, -10))
 			
 			// DESTRUCTION AUDIO EFFECT
-			this.sound.play('earthquake')
+			this.sound.play('earthquake', { volume: 0.6 })
 
 			this.jump_counter = 150;
 		}

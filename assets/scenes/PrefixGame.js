@@ -44,6 +44,11 @@ class PrefixGame extends Phaser.Scene {
 	
 	editorCreate() {
 		
+		// sprite_explosion_fx_0001
+		const sprite_explosion_fx_0001 = this.add.image(387, 321, "sprite_explosion_fx_0001");
+		sprite_explosion_fx_0001.scaleX = 2.214899559199698;
+		sprite_explosion_fx_0001.scaleY = 2.881068570595161;
+		
 		// swimming_neymar
 		const swimming_neymar = this.add.sprite(349, 377, "tile008");
 		swimming_neymar.scaleX = 5;

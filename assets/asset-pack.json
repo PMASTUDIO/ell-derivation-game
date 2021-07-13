@@ -12,13 +12,6 @@
                 "key": "back"
             },
             {
-                "url": [
-                    "assets/music/background-music.wav"
-                ],
-                "type": "audio",
-                "key": "background-music"
-            },
-            {
                 "url": "assets/Blackboard.png",
                 "type": "image",
                 "key": "Blackboard"
@@ -42,6 +35,13 @@
             },
             {
                 "url": [
+                    "assets/music/champions.wav"
+                ],
+                "type": "audio",
+                "key": "champions"
+            },
+            {
+                "url": [
                     "assets/components/UserComponent.js",
                     "assets/components/PushOnClick.js"
                 ],
@@ -52,6 +52,13 @@
                 "url": "assets/components/Countdown.js",
                 "type": "script",
                 "key": "Countdown"
+            },
+            {
+                "url": [
+                    "assets/music/Cuphead OST - Introduction [Music].mp3"
+                ],
+                "type": "audio",
+                "key": "Cuphead OST - Introduction [Music]"
             },
             {
                 "url": "assets/scenes/DerivationGame.js",
@@ -145,9 +152,29 @@
                 "key": "MenuScene"
             },
             {
+                "url": "assets/neymar-art.png",
+                "type": "image",
+                "key": "neymar-art"
+            },
+            {
+                "url": "assets/neymar-down.png",
+                "type": "image",
+                "key": "neymar-down"
+            },
+            {
                 "url": "assets/neymar-pointing.png",
                 "type": "image",
                 "key": "neymar-pointing"
+            },
+            {
+                "url": "assets/neymar-standing.png",
+                "type": "image",
+                "key": "neymar-standing"
+            },
+            {
+                "url": "assets/neymar-won.png",
+                "type": "image",
+                "key": "neymar-won"
             },
             {
                 "url": "assets/play-btn.png",
@@ -192,9 +219,19 @@
                 "key": "shout"
             },
             {
+                "url": "assets/sky-3619815_960_720.jpg",
+                "type": "image",
+                "key": "sky-3619815_960_720"
+            },
+            {
                 "url": "assets/speech-bg.png",
                 "type": "image",
                 "key": "speech-bg"
+            },
+            {
+                "url": "assets/sprite_explosion_fx_0001.png",
+                "type": "image",
+                "key": "sprite_explosion_fx_0001"
             },
             {
                 "url": "assets/scenes/SufixGame.js",

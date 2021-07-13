@@ -8,6 +8,19 @@
     },
     "displayList": [
         {
+            "type": "Image",
+            "id": "27cd7041-f7ac-4e8f-8d46-043783941857",
+            "label": "sprite_explosion_fx_0001",
+            "components": [],
+            "texture": {
+                "key": "sprite_explosion_fx_0001"
+            },
+            "x": 422,
+            "y": 258,
+            "scaleX": 2.115761715579482,
+            "scaleY": 2.115761715579482
+        },
+        {
             "type": "Text",
             "id": "4a1e6035-7a34-415e-875d-09c32990e981",
             "label": "label-main",

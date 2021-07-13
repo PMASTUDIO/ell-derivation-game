@@ -9,6 +9,19 @@
     "displayList": [
         {
             "type": "Image",
+            "id": "9dbfdc5e-5ab3-4a57-82f3-6d08193231f1",
+            "label": "sprite_explosion_fx_0001",
+            "components": [],
+            "texture": {
+                "key": "sprite_explosion_fx_0001"
+            },
+            "x": 409,
+            "y": 268,
+            "scaleX": 2.115761715579482,
+            "scaleY": 2.115761715579482
+        },
+        {
+            "type": "Image",
             "id": "64b51602-6137-4dcb-844d-aad386fb4ecb",
             "label": "evil_duolingo",
             "scope": "CLASS",
@@ -26,12 +39,12 @@
             "scope": "CLASS",
             "components": [],
             "texture": {
-                "key": "neymar-pointing"
+                "key": "neymar-standing"
             },
             "x": 655,
             "y": 408,
-            "scaleX": 0.07311075498480107,
-            "scaleY": 0.07311075498480107
+            "scaleX": 0.08438632522497337,
+            "scaleY": 0.08438632522497337
         },
         {
             "type": "Container",

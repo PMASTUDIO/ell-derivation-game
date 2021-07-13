@@ -21,6 +21,17 @@
             "scaleY": 1.7577587566018462
         },
         {
+            "type": "Image",
+            "id": "fc016625-6896-4058-b624-de118d5128d8",
+            "label": "art-neymar",
+            "components": [],
+            "texture": {
+                "key": "neymar-art"
+            },
+            "x": 613,
+            "y": 253
+        },
+        {
             "type": "Sprite",
             "id": "8ad28c06-f2c9-49da-bd6b-d09e9846e4ed",
             "label": "btnPlay",
@@ -39,8 +50,8 @@
             "id": "2502f33b-7fe8-4c32-a992-814c6d1501df",
             "label": "text",
             "components": [],
-            "x": 64,
-            "y": 305,
+            "x": 14,
+            "y": 429,
             "originX": 0,
             "originY": 0,
             "text": "Créditos:\n\nhttps://freesound.org/\nhttps://www.todamateria.com.br/formacao-de-palavras/\nhttps://mundoeducacao.uol.com.br/gramatica/substantivo-primitivo.htm \nExercícios sobre derivação - Mundo Educação (uol.com.br)\nExercícios sobre formação de palavras - Toda Matéria (todamateria.com.br)\nExercícios Resolvidos de Morfologia - Só Português (soportugues.com.br)\nExercícios sobre radicais e prefixos latinos - Brasil Escola (uol.com.br)\n"

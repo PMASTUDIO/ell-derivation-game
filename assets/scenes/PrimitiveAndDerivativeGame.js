@@ -44,6 +44,11 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 	
 	editorCreate() {
 		
+		// sprite_explosion_fx_0001
+		const sprite_explosion_fx_0001 = this.add.image(439, 262, "sprite_explosion_fx_0001");
+		sprite_explosion_fx_0001.scaleX = 2.115761715579482;
+		sprite_explosion_fx_0001.scaleY = 2.115761715579482;
+		
 		// txt_countdown
 		const txt_countdown = this.add.text(368, 16, "", {});
 		txt_countdown.scaleX = 0.702820375578614;
@@ -147,6 +152,9 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 			this.activeAnswerI == 0 ? this.bg_ans1.setFillStyle('0x00ff00') : this.bg_ans2.setFillStyle('0x00ff00')
 
 			this.add.image(373.1230665371493, 340.8866708785447, "gol").setDepth(99);
+			
+			this.character.setAlpha(0);
+			this.add.image(100, 340.8866708785447, "neymar-won").setDepth(99).setScale(0.1, 0.1);
 
 			this.time.delayedCall(3000, () => {
 
@@ -174,6 +182,11 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		}
 	}
 
+	neymarChangeToFall = () => {
+		this.character.setTexture('neymar-down')
+		this.character.setScale(0.07, 0.07)
+	}
+
 	handleInput = () => {
 		this.keys = this.input.keyboard.addKeys({
 			left: 'left',
@@ -181,6 +194,8 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		});
 
 		this.keys.right.on('down', () => {
+			this.neymarChangeToFall();
+
 			this.txt_inst.destroy();
 
 			this.sound.play('men-scream')
@@ -188,6 +203,8 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 			this.character.setAngularVelocity(2)
 		})
 		this.keys.left.on('down', () => {
+			this.neymarChangeToFall();
+
 			this.txt_inst.destroy();
 
 			this.sound.play('men-scream')
@@ -222,11 +239,11 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		this.ground.setStatic(true)
 
 		// Character
-		this.character = this.matter.add.image(404, 365, "neymar-pointing");
-		this.character.setCircle(1200)
-		this.character.setOrigin(0.7, 0.5)
-		this.character.scaleX = 0.08788316312942678;
-		this.character.scaleY = 0.08788316312942678;
+		this.character = this.matter.add.image(404, 365, "neymar-standing");
+		this.character.setCircle(1000)
+		this.character.setOrigin(0.5, 0.5)
+		this.character.scaleX = 0.1;
+		this.character.scaleY = 0.1;
 		this.character.setFriction(0.6)
 		this.character.setDepth(10)
 

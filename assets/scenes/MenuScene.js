@@ -18,13 +18,16 @@ class MenuScene extends Phaser.Scene {
 		image.scaleX = 1.3168771738286316;
 		image.scaleY = 1.7577587566018462;
 		
+		// art-neymar
+		this.add.image(613, 253, "neymar-art");
+		
 		// btnPlay
 		const btnPlay = this.add.sprite(139, 120, "playBtn");
 		btnPlay.scaleX = 0.4288998501767396;
 		btnPlay.scaleY = 0.4288998501767396;
 		
 		// text
-		const text = this.add.text(64, 305, "", {});
+		const text = this.add.text(14, 429, "", {});
 		text.text = "Créditos:\n\nhttps://freesound.org/\nhttps://www.todamateria.com.br/formacao-de-palavras/\nhttps://mundoeducacao.uol.com.br/gramatica/substantivo-primitivo.htm \nExercícios sobre derivação - Mundo Educação (uol.com.br)\nExercícios sobre formação de palavras - Toda Matéria (todamateria.com.br)\nExercícios Resolvidos de Morfologia - Só Português (soportugues.com.br)\nExercícios sobre radicais e prefixos latinos - Brasil Escola (uol.com.br)\n";
 		
 		this.btnPlay = btnPlay;

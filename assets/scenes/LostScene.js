@@ -19,7 +19,6 @@ class LostScene extends Phaser.Scene {
 			"https://www.youtube.com/embed/uToPiNZYLc8",
 			"https://www.youtube.com/embed/1NKa3NquubU"
 		];
-		this.randomVideoI = Math.floor(Math.random() * this.videosLinks.length)
 		this.sceneToReturn = undefined
 		/* END-USER-CTR-CODE */
 	}
@@ -64,6 +63,8 @@ class LostScene extends Phaser.Scene {
 		this.editorCreate();
 
 		this.sceneToReturn = data.sceneToReturn
+
+		this.randomVideoI = Math.floor(Math.random() * this.videosLinks.length)
 
 		const video = this.add
 			.dom(350, 400)

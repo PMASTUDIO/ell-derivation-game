@@ -20,6 +20,11 @@ class DerivationGame extends Phaser.Scene {
 	
 	editorCreate() {
 		
+		// sprite_explosion_fx_0001
+		const sprite_explosion_fx_0001 = this.add.image(422, 258, "sprite_explosion_fx_0001");
+		sprite_explosion_fx_0001.scaleX = 2.115761715579482;
+		sprite_explosion_fx_0001.scaleY = 2.115761715579482;
+		
 		// label-main
 		const label_main = this.add.text(242, 22, "", {});
 		label_main.text = "Neymar joga Golf";

@@ -8,6 +8,19 @@
     },
     "displayList": [
         {
+            "type": "Image",
+            "id": "6f52bfd8-0fde-4c42-a45a-cdbb141aa5c8",
+            "label": "sprite_explosion_fx_0001",
+            "components": [],
+            "texture": {
+                "key": "sprite_explosion_fx_0001"
+            },
+            "x": 387,
+            "y": 321,
+            "scaleX": 2.214899559199698,
+            "scaleY": 2.881068570595161
+        },
+        {
             "type": "Sprite",
             "id": "685758f5-d310-46df-8d7e-edfb8b4c312d",
             "label": "swimming_neymar",
