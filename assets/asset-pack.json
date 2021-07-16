@@ -54,6 +54,11 @@
                 "key": "Countdown"
             },
             {
+                "url": "assets/court.jpg",
+                "type": "image",
+                "key": "court"
+            },
+            {
                 "url": [
                     "assets/music/Cuphead OST - Introduction [Music].mp3"
                 ],
@@ -222,6 +227,11 @@
                 "url": "assets/sky-3619815_960_720.jpg",
                 "type": "image",
                 "key": "sky-3619815_960_720"
+            },
+            {
+                "url": "assets/soccer-field.jpg",
+                "type": "image",
+                "key": "soccer-field"
             },
             {
                 "url": "assets/speech-bg.png",

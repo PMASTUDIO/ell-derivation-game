@@ -48,7 +48,7 @@ class Boot extends Phaser.Scene {
   create() {
     this.scene.stop("LoadingSpinner")
 
-    main_music = this.sound.add('Cuphead OST - Introduction [Music]', {loop:true, volume: 0.6});
+    main_music = this.sound.add('Cuphead OST - Introduction [Music]', {loop:true, volume: 0.2 });
     main_music.play();
 
     this.scene.start('MenuScene');

@@ -47,7 +47,7 @@ class PrefixTut extends Phaser.Scene {
 		const video = this.add
 		.dom(350, 350)
 		.createFromHTML(
-			`<iframe width="560" height="315" src="https://www.youtube.com/embed/uYVTD1Y3w4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+			`<iframe width="560" height="315" src="https://www.youtube.com/embed/94rWBQ87XnE?color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 		);
 
 		this.btnNext.setInteractive().on('pointerdown', (ptr) => {

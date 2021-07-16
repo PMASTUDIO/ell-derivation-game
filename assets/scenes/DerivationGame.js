@@ -15,6 +15,8 @@ class DerivationGame extends Phaser.Scene {
 		this.ball;
 		this.catchFlag = false;
 		this.launchVelocity = 0;
+
+		this.collisionActive = false;
 		/* END-USER-CTR-CODE */
 	}
 	
@@ -66,7 +68,7 @@ class DerivationGame extends Phaser.Scene {
 	/* START-USER-CODE */
 	
 	// Write your code here
-	
+
 	get_data = (level_index) => {
 		this.questions = [
 			{
@@ -81,7 +83,7 @@ class DerivationGame extends Phaser.Scene {
 			},
 			{
 				question: "Acerte a alternativa cuja palavra em maiúscula seja formada \n pelo processo de derivação regressiva:",
-				alternatives: ["HAJA coração!", "A COMPRA do imóvel \n já foi cadastrada.", "Os MAUS serão \n punidos.", "A índia estava \n ACOCORADA na beira do rio."],
+				alternatives: ["HAJA coração!", "A COMPRA do imóvel \n já foi cadastrada.", "Os MAUS serão \n punidos.", "A índia estava \nACOCORADA na\nbeira do rio."],
 				correct_index: 1
 			},
 			{
@@ -194,17 +196,19 @@ class DerivationGame extends Phaser.Scene {
 			this.hole_answers[i].setStatic(true)
 			this.hole_answers[i].setScale(0.2, 0.2)
 			this.hole_answers[i].setOnCollideWith(this.ball, (pair) => {
-				this.ball.body.destroy();
-				this.ball.setAlpha(0);
+				if(this.collisionActive){
+					this.ball.body.destroy();
+					this.ball.setAlpha(0);
 
-				if(this.active_question_obj.correct_index == i){
-					// RIGHT ANSWER
-					this.answeredRight();
-					console.log("Acertou!");
-				} else {
-					// WRONG ANSWER
-					this.answeredWrong();
-					console.log("Errou");
+					if(this.active_question_obj.correct_index == i){
+						// RIGHT ANSWER
+						this.answeredRight();
+						console.log("Acertou!");
+					} else {
+						// WRONG ANSWER
+						this.answeredWrong();
+						console.log("Errou");
+					}
 				}
 			})
 		}
@@ -233,12 +237,15 @@ class DerivationGame extends Phaser.Scene {
 
 		this.time.delayedCall(2000, () => {
 			this.input.on('pointerdown', () => {
+				this.collisionActive = false;
 				this.ball.setIgnoreGravity(true);
 				this.ball.setVelocity(0, 0);
 				this.catchFlag = true;
 				// this.ball.setAwake()
 			});
 			this.input.on('pointerup', () => {
+				this.collisionActive = true;
+
 				this.ball.setStatic(false)
 				this.catchFlag = false;
 

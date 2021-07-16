@@ -8,6 +8,19 @@
     },
     "displayList": [
         {
+            "type": "Image",
+            "id": "aee04c13-4ef4-40a7-8ff0-4bd12b27e150",
+            "label": "court",
+            "components": [],
+            "texture": {
+                "key": "soccer-field"
+            },
+            "x": 403,
+            "y": 305,
+            "scaleX": 0.7867864288214198,
+            "scaleY": 0.8197282850016794
+        },
+        {
             "type": "Sprite",
             "id": "16c1cf83-5352-4043-adf2-c0c7082183b1",
             "label": "btnNext",
@@ -24,11 +37,15 @@
         {
             "prefabId": "2998493f-d676-4de2-96b6-777b1d755988",
             "id": "7473c65f-b255-4f3b-8a98-f45054e8484b",
+            "unlock": [
+                "color"
+            ],
             "label": "writingTextPrefab",
             "scope": "CLASS",
             "components": [],
             "x": 49,
-            "y": 43
+            "y": 43,
+            "color": "#ffffffff"
         },
         {
             "type": "Image",
@@ -37,13 +54,14 @@
             "scope": "CLASS",
             "components": [],
             "texture": {
-                "key": "evil-duolingo"
+                "key": "neymar-art"
             },
             "x": 39,
             "y": 748,
-            "scaleX": 0.3,
-            "scaleY": 0.3,
-            "angle": 21
+            "scaleX": 0.4,
+            "scaleY": 0.4,
+            "angle": 21,
+            "flipX": true
         }
     ],
     "plainObjects": [],

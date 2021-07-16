@@ -13,26 +13,28 @@ class BossFight extends Phaser.Scene {
 		this.last_jump_time = 300;
 		this.jump_counter = 300;
 
+		this.input_active = true;
+
 		this.questions = [
 			{
-				question: "“Ai, flores, ai flores do verde ramo se sabedes novas do meu amado?\n//Ai, Deus,e u é” Qual(is) palavras presentes na cantiga,\nsão formadas por derivação imprópria?",
-				alternatives: ['"novas" e "amado"', '"flores" e "novas"', '"sabedes" e "amado"', '"ramo" e "flores"', "nenhuma"],
+				question: "Assinale a única alternativa cuja palavra destacada é formada\npor derivação parassintética:",
+				alternatives: ['Aquele olhar era de 𝐞𝐧𝐭𝐫𝐢𝐬𝐭𝐞𝐜𝐞𝐫, \nmas não vou pensar mais nisso.', 'Vou 𝐩𝐥𝐚𝐧𝐭𝐚𝐫 muitas árvores\nfrutíferas em meu quintal.', 'Quase tive um 𝐚𝐭𝐚𝐪𝐮𝐞 do coração \nquando abri a porta.', 'Gostaria de falar 𝐜𝐨𝐧𝐯𝐨𝐬𝐜𝐨.', "Haja o que houver, serei sempre\num 𝐯𝐢𝐭𝐨𝐫𝐢𝐨𝐬𝐨 combatente."],
 				correct_index: 0
 			},
 			{
-				question: "O prefixo assinalado em “𝐝𝐞𝐬vario” expressa:",
-				alternatives: ["negação", "cessação", "ação contrária.", "separação", "intensificação"],
-				correct_index: 2
-			},
-			{
-				question: "Assinale a alternativa com uma primitiva e\nsua respectiva derivada: (prim/deriv)",
-				alternatives: ["portão/portaria", "vidraça/vidraçaria", "florista/flor", "ferro/ferramenta", "todas estão corretas"],
+				question: "As palavras couve-flor, planalto e aguardente são formadas por:",
+				alternatives: ["derivação", "onomatopeia", "hibridismo", "composição", "prefixação"],
 				correct_index: 3
 			},
 			{
-				question: "Você respeitará a lingua portuguesa a partir de agora neymar\ne votará no maravilhoso jogo desse grupo? (Cuidado com a resposta)",
-				alternatives: ["Com certeza", "Talvez", "Meh", "Não", "Definitivamente não"],
-				correct_index: 0
+				question: "Inúmeros substantivos na Língua Portuguesa formam-se por derivação\nregressiva, ou seja, derivam-se de verbos. Sabendo disso, assinale\n a alternativa cujo vocábulo em destaque fora formado por esse processo.",
+				alternatives: ["O ser humano tende a buscar\nprazer em todas as suas 𝐯𝐢𝐯𝐞̂𝐧𝐜𝐢𝐚𝐬", "Essas relações sociais podem contribuir\npara que a 𝐩𝐫𝐞𝐯𝐞𝐧𝐜̧𝐚̃𝐨 do adoecimento mental aconteça", "Essas relações sociais podem contribuir\npara que a prevenção do 𝐚𝐝𝐨𝐞𝐜𝐢𝐦𝐞𝐧𝐭𝐨 mental aconteça", "essa relação, que é tão importante para o ser humano,\npode ser fragilizada pela 𝐦𝐮𝐝𝐚𝐧𝐜̧𝐚 abrupta da rotina", "por meio do 𝐝𝐢𝐚́𝐥𝐨𝐠𝐨 é consideravelmente mais efetivo\ne saudável do que uma comunicação agressiva."],
+				correct_index: 4
+			},
+			{
+				question: "Em que alternativa a palavra destacada resulta de derivação imprópria?",
+				alternatives: ["Às sete horas da manhã começou\no trabalho principal: a 𝐯𝐨𝐭𝐚𝐜̧𝐚̃𝐨.", "𝐏𝐞𝐫𝐞𝐢𝐫𝐢𝐧𝐡𝐚 estava mesmo com a razão. Sigilo...\nVoto secreto ... Bobagens, bobagens!", "Sem radical 𝐫𝐞𝐟𝐨𝐫𝐦𝐚 da lei eleitoral,\nas eleições continuariam sendo uma farsa!", "Não chegaram a trocar um 𝐢𝐬𝐭𝐨 de\nprosa, e se entenderam.", "Dr. Osmírio andaria 𝐝𝐞𝐬𝐨𝐫𝐢𝐞𝐧𝐭𝐚𝐝𝐨,\nsenão bufando de raiva."],
+				correct_index: 3
 			},
 		];
 
@@ -231,6 +233,8 @@ class BossFight extends Phaser.Scene {
 			
 			this.time.delayedCall(1000, this.handleRight)
 		} else {
+			this.input_active = false;
+
 			console.log(alt)
 			alt.setFillStyle('0xff0000')
 
@@ -275,6 +279,8 @@ class BossFight extends Phaser.Scene {
 
 	create(data) {
 	
+		this.input_active = true;
+
 		this.editorCreate();
 
 		if(data.reset){
@@ -295,7 +301,11 @@ class BossFight extends Phaser.Scene {
 		this.evil_duolingo.scaleY = 0.48452979182584843;
 
 		this.ansBox.forEach((alt, i) => {
-			alt.setInteractive().on('pointerdown', () => this.alternativeClick(alt, i))
+			alt.setInteractive().on('pointerdown', () => {
+				if(this.input_active){
+					this.alternativeClick(alt, i)
+				}
+			})
 		})
 
 		this.loadQuestion(this.currentQuestionIndex)

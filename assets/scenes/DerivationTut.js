@@ -45,7 +45,7 @@ class DerivationTut extends Phaser.Scene {
     const video = this.add
       .dom(350, 350)
       .createFromHTML(
-        `<iframe width="560" height="315" src="https://www.youtube.com/embed/rK6ulQaOpso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/7fdGNi5TfoE?color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
       );
 
     this.btnNext.setInteractive().on('pointerdown', (ptr) => {

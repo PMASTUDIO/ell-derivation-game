@@ -199,7 +199,7 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 			this.txt_inst.destroy();
 
 			this.sound.play('men-scream')
-			this.character.applyForce(new Phaser.Math.Vector2(2, 0))
+			this.character.applyForce(new Phaser.Math.Vector2(1000, 0))
 			this.character.setAngularVelocity(2)
 		})
 		this.keys.left.on('down', () => {
@@ -208,7 +208,7 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 			this.txt_inst.destroy();
 
 			this.sound.play('men-scream')
-			this.character.applyForce(new Phaser.Math.Vector2(-2, 0))
+			this.character.applyForce(new Phaser.Math.Vector2(-1000, 0))
 			this.character.setAngularVelocity(-2)
 		})
 	}
@@ -244,10 +244,11 @@ class PrimitiveAndDerivativeGame extends Phaser.Scene {
 		this.character.setOrigin(0.5, 0.5)
 		this.character.scaleX = 0.1;
 		this.character.scaleY = 0.1;
-		this.character.setFriction(0.6)
+		this.character.setFriction(0.8)
 		this.character.setDepth(10)
+		this.character.setBounce(0.5)
 
-		this.character.setMass(1000000)
+		this.character.setMass(10000)
 
 		// bg_ans1
 		const bg_ans1 = this.add.rectangle(80, 352, 128, 128);

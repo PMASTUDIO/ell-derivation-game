@@ -10,7 +10,7 @@ class WritingTextPrefab extends Phaser.GameObjects.Text {
 		
 		this.scaleX = 0.4;
 		this.scaleY = 0.4;
-		this.setStyle({"fontSize":"72px"});
+		this.setStyle({"align":"justify","fontSize":"72px"});
 		
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -21,6 +21,9 @@ class WritingTextPrefab extends Phaser.GameObjects.Text {
 	/* START-USER-CODE */
 
 	defineText = (text) => {
+		this.scaleX = 0.4;
+		this.scaleY = 0.4;
+
 		this.toBeText = text
 	}
 

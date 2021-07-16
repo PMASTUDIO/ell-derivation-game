@@ -160,13 +160,16 @@ class SufixGame extends Phaser.Scene {
 	}
 	
 	checkForMatch = () => {
-		const second = this.selectedBoxes.pop()
-		const first = this.selectedBoxes.pop()
+		const second = this.selectedBoxes[1]
+		const first = this.selectedBoxes[0]
 
 		// NO MATCH
 		if(first.item !== second.item){
 			QuestionHolder.getComponent(first.card).hide()
-			QuestionHolder.getComponent(second.card).hide()
+			QuestionHolder.getComponent(second.card).hide(() => {
+				this.selectedBoxes.pop();
+				this.selectedBoxes.pop();
+			})
 			return;
 		}
 
@@ -175,6 +178,9 @@ class SufixGame extends Phaser.Scene {
 		this.time.delayedCall(300, () => {
 			first.card.setTint('0x8feb34')
 			second.card.setTint('0x8feb34')
+			
+			this.selectedBoxes.pop();
+			this.selectedBoxes.pop();
 
 			// TOTAL MATCHES SHOULD BE 4 (4 PAIRS)
 			if(this.matchesCount >= 4){
@@ -195,6 +201,9 @@ class SufixGame extends Phaser.Scene {
 			return
 		}
 
+		if(this.selectedBoxes.length > 1){
+			return
+		}
 		
 		this.selectedBoxes.push({
 			card: card,
@@ -211,6 +220,7 @@ class SufixGame extends Phaser.Scene {
 			this.checkForMatch();
 		})
 		
+		console.log(this.selectedBoxes)
 	}
 
 	timeOut = () => {

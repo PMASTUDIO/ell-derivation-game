@@ -65,7 +65,7 @@ class QuestionHolder {
 		})
 	}
 
-	hide = () => {
+	hide = (clbck) => {
 		this.isRevealed = false;
 
 		const scene = this.gameObject.scene
@@ -92,6 +92,10 @@ class QuestionHolder {
 					scaleY: originalScaleY,
 					duration: 100,
 					ease: 'Linear',
+				}).on('complete', () => {
+					if (clbck){
+						clbck();
+					}
 				})
 			})
 

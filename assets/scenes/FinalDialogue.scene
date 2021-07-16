@@ -8,6 +8,19 @@
     },
     "displayList": [
         {
+            "type": "Image",
+            "id": "7dd35a18-0ea5-42a0-bb7d-d4aeb700bc27",
+            "label": "court",
+            "components": [],
+            "texture": {
+                "key": "soccer-field"
+            },
+            "x": 402,
+            "y": 304,
+            "scaleX": 0.7867864288214198,
+            "scaleY": 0.8197282850016794
+        },
+        {
             "type": "Sprite",
             "id": "16c1cf83-5352-4043-adf2-c0c7082183b1",
             "label": "btnNext",
@@ -25,16 +38,15 @@
             "prefabId": "2998493f-d676-4de2-96b6-777b1d755988",
             "id": "9ec3daa2-451e-458a-beb6-0c908dff238c",
             "unlock": [
-                "scaleX",
-                "scaleY"
+                "color",
+                "text"
             ],
             "label": "writingTextPrefab",
             "scope": "CLASS",
             "components": [],
             "x": 27,
             "y": 30,
-            "scaleX": 0.4,
-            "scaleY": 0.4
+            "color": "#ffffffff"
         }
     ],
     "plainObjects": [],

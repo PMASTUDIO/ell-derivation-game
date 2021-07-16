@@ -15,6 +15,11 @@ class IntroDialogue extends Phaser.Scene {
 	
 	editorCreate() {
 		
+		// court
+		const court = this.add.image(403, 305, "soccer-field");
+		court.scaleX = 0.7867864288214198;
+		court.scaleY = 0.8197282850016794;
+		
 		// btnNext
 		const btnNext = this.add.sprite(744, 538, "playBtn");
 		btnNext.scaleX = 0.18046466104384898;
@@ -23,12 +28,16 @@ class IntroDialogue extends Phaser.Scene {
 		// writingTextPrefab
 		const writingTextPrefab = new WritingTextPrefab(this, 49, 43);
 		this.add.existing(writingTextPrefab);
+		writingTextPrefab.scaleX = 1;
+		writingTextPrefab.scaleY = 1;
+		writingTextPrefab.setStyle({"color":"#ffffffff"});
 		
 		// evil_duolingo
-		const evil_duolingo = this.add.image(39, 748, "evil-duolingo");
-		evil_duolingo.scaleX = 0.3;
-		evil_duolingo.scaleY = 0.3;
+		const evil_duolingo = this.add.image(39, 748, "neymar-art");
+		evil_duolingo.scaleX = 0.4;
+		evil_duolingo.scaleY = 0.4;
 		evil_duolingo.angle = 21;
+		evil_duolingo.flipX = true;
 		
 		this.btnNext = btnNext;
 		this.writingTextPrefab = writingTextPrefab;
